@@ -43,3 +43,5 @@ body { padding: 0px; margin: 0px; }
 #colophon::before { width: 100%; margin: 20px 0; display: block; content: ''; height: 2px; background-color: #610f1e; }
 
 .home { background-color: #111111; }
+
+.grid-item { margin: 10px; }
