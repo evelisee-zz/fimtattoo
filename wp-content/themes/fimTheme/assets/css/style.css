@@ -1,3 +1,26 @@
-body {
-  padding: 0px;
-  margin: 0px; }
+/*
+Theme Name: FimTheme
+Description: Used to style the TinyMCE editor.
+*/
+@import "https://fonts.googleapis.com/css?family=Oswald:300,400,700";
+.oswald { font-family: 'Oswald', sans-serif; font-weight: 400; }
+
+.oswald-bold { font-family: 'Oswald', sans-serif; font-weight: 700; }
+
+.oswald-light { font-family: 'Oswald', sans-serif; font-weight: 300; }
+
+body { padding: 0px; margin: 0px; }
+
+.holder { max-width: 950px; margin: 0 auto; }
+
+.content-logo { display: block; text-align: center; margin-top: 40px; }
+
+.content-menu { margint-top: 45px; background-color: #61111e; display: block; }
+.content-menu ul { padding-left: 0; }
+.content-menu li { display: inline-block; position: relative; padding: 12px 12px; }
+.content-menu li a { text-decoration: none; color: white; text-transform: uppercase; }
+.content-menu li:first-child a { padding-left: 11px; }
+.content-menu li:first-child::before { position: absolute; top: 14px; content: ''; height: 24px; margin-right: 11px; width: 2px; background-color: black; }
+.content-menu li::after { position: absolute; top: 14px; content: ''; height: 24px; margin-left: 12px; width: 2px; background-color: black; }
+
+.home { background-color: #111111; }

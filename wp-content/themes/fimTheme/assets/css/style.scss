@@ -3,8 +3,92 @@ Theme Name: FimTheme
 Description: Used to style the TinyMCE editor.
 */
 
+//...............
+// Fonts
+//...............
+	@import 'https://fonts.googleapis.com/css?family=Oswald:300,400,700';
 
-body{
-	padding:0px;
-	margin:0px;
-}
+	.oswald{
+		font-family: 'Oswald', sans-serif;
+		font-weight:400;
+	}
+	.oswald-bold{
+		font-family: 'Oswald', sans-serif;
+		font-weight:700;
+	}
+	.oswald-light{
+		font-family: 'Oswald', sans-serif;
+		font-weight:300;
+	}
+
+//...............
+// Inicial
+//...............
+	body{
+		padding:0px;
+		margin:0px;
+	}
+
+	.holder{
+		max-width: 950px;
+		margin:0 auto;
+	}
+
+//..............
+// Header
+//..............
+	.content-logo{
+		display:block;
+		text-align: center;
+		margin-top: 40px;
+	}
+	.content-menu{
+		margint-top:45px;
+		background-color: #61111e;
+		display: block;
+
+		ul{
+			padding-left:0;
+		}
+
+		li{
+			display: inline-block;
+			position:relative;
+			padding: 12px 12px;
+
+			a{
+				text-decoration: none;
+				color:white;
+				text-transform: uppercase;
+			}
+		}
+		li:first-child a{ padding-left: 11px; }
+
+		li:first-child::before{
+			position: absolute;
+			top: 14px;
+			content: '';
+			height: 24px;
+			margin-right: 11px;
+			width: 2px;
+			background-color: black;
+		}
+
+
+		li::after{
+			position: absolute;
+			top: 14px;
+			content: '';
+			height: 24px;
+			margin-left: 12px;
+			width: 2px;
+			background-color: black;
+		}
+	}
+
+//..............
+// Home
+//..............
+	.home{
+		background-color: #111111;
+	}
