@@ -39,6 +39,10 @@ Description: Used to style the TinyMCE editor.
 		background-color:transparent;
 	}
 
+	.rtio-btn{
+		border-radius:50%;
+	}
+
 //..............
 // Header
 //..............
@@ -46,6 +50,16 @@ Description: Used to style the TinyMCE editor.
 		display:block;
 		text-align: center;
 		margin-top: 40px;
+	}
+	.content-button{
+		display: block;
+
+		button{
+			border:1px solid black;
+			span{
+				background:black;
+			}
+		}
 	}
 	.content-menu{
 		margin-top:45px;
@@ -55,7 +69,6 @@ Description: Used to style the TinyMCE editor.
 		ul{
 			padding-left:0;
 			margin:0;
-			margin-left: 20px;
 		}
 
 		li{
@@ -104,6 +117,33 @@ Description: Used to style the TinyMCE editor.
 				i{font-size:15px;}
 			}
 		}
+	}
+
+//..............
+// Footer
+//..............
+	#colophon{
+		text-align: center;
+		button{
+			margin: 0 10px;
+			background-color:#610f1e!important;
+			color: white;
+			width: 37px;
+    		padding: 7px 9px;
+			i{font-size: 19px!important;}
+		}
+		.copyright{
+			color: #bfbeac;
+			font-size: 12px;
+		}
+	}
+	#colophon::before{
+		width: 100%;
+		margin: 20px 0;
+		display:block;
+		content: '';
+		height: 2px;
+		background-color: #610f1e;
 	}
 
 //..............

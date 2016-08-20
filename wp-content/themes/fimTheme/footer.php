@@ -12,24 +12,19 @@
 
 	</div><!-- .site-content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<?php
-				/**
-				 * Fires before the Twenty Fifteen footer text for footer customization.
-				 *
-				 * @since Twenty Fifteen 1.0
-				 */
-				do_action( 'twentyfifteen_credits' );
-			?>
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentyfifteen' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentyfifteen' ), 'WordPress' ); ?></a>
-		</div><!-- .site-info -->
+	<footer id="colophon" class="container site-footer holder" role="contentinfo">
+		<button class="rtio-btn btn-clear"><i class="fa fa-facebook"></i></button>
+		<button class="rtio-btn btn-clear"><i class="fa fa-twitter"></i></button>
+		<button class="rtio-btn btn-clear"><i class="fa fa-instagram"></i></button>
+		<button class="rtio-btn btn-clear"><i class="fa fa-youtube-play"></i></button>
+
+		<p class="copyright oswald-light">&#xa9; FIM 2016</p>
 	</footer><!-- .site-footer -->
 
 </div><!-- .site -->
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script scr="<?php bloginfo( 'template_directory' ); ?>/assets/js/plugins/bootstrap.js"></script>
+<script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/plugins/bootstrap.js"></script>
 
 </body>
 </html>

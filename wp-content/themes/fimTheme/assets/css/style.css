@@ -15,10 +15,16 @@ body { padding: 0px; margin: 0px; }
 
 .btn-clear { border: 0; background-color: transparent; }
 
+.rtio-btn { border-radius: 50%; }
+
 .content-logo { display: block; text-align: center; margin-top: 40px; }
 
+.content-button { display: block; }
+.content-button button { border: 1px solid black; }
+.content-button button span { background: black; }
+
 .content-menu { margin-top: 45px; background-color: #61111e; display: block; }
-.content-menu ul { padding-left: 0; margin: 0; margin-left: 20px; }
+.content-menu ul { padding-left: 0; margin: 0; }
 .content-menu li { display: inline-block; position: relative; padding: 12px 12px; }
 .content-menu li a { text-decoration: none; color: white; text-transform: uppercase; }
 .content-menu li:first-child a { padding-left: 11px; }
@@ -27,5 +33,12 @@ body { padding: 0px; margin: 0px; }
 .content-menu .search { margin: 9px 15px 0 0; }
 .content-menu .search button { background-color: white; color: #61111e; border-radius: 50%; padding: 3px 6px; }
 .content-menu .search button i { font-size: 15px; }
+
+#colophon { text-align: center; }
+#colophon button { margin: 0 10px; background-color: #610f1e !important; color: white; width: 37px; padding: 7px 9px; }
+#colophon button i { font-size: 19px !important; }
+#colophon .copyright { color: #bfbeac; font-size: 12px; }
+
+#colophon::before { width: 100%; margin: 20px 0; display: block; content: ''; height: 2px; background-color: #610f1e; }
 
 .home { background-color: #111111; }
