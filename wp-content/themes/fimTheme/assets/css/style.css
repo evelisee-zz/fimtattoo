@@ -30,13 +30,14 @@ body { padding: 0px; margin: 0px; }
 .content-menu li:first-child a { padding-left: 11px; }
 .content-menu li:first-child::before { position: absolute; top: 11px; content: ''; height: 24px; margin-right: 11px; width: 2px; background-color: black; }
 .content-menu li::after { position: absolute; top: 11px; content: ''; height: 24px; margin-left: 12px; width: 2px; background-color: black; }
-.content-menu .search { margin: 9px 15px 0 0; }
-.content-menu .search button { background-color: white; color: #61111e; border-radius: 50%; padding: 3px 6px; }
+.content-menu .search { margin: 6px 15px 0 0; }
+.content-menu .search button { background-color: white; color: #61111e; border-radius: 50%; width: 30px; height: 30px; line-height: 28px; }
 .content-menu .search button i { font-size: 15px; }
 
 #colophon { text-align: center; }
-#colophon button { margin: 0 10px; background-color: #610f1e !important; color: white; width: 37px; padding: 7px 9px; }
+#colophon button { transition: 0.6s all; background-color: #610f1e !important; color: white; display: inline-block; width: 40px; height: 40px; line-height: 40px; font-size: 20px; margin: 0 6px; font-size: 20px; border-radius: 100%; text-align: center; }
 #colophon button i { font-size: 19px !important; }
+#colophon button:hover { background-color: white !important; color: #610f1e; transition-duration: 0.6s; transition-property: all; }
 #colophon .copyright { color: #bfbeac; font-size: 12px; }
 
 #colophon::before { width: 100%; margin: 20px 0; display: block; content: ''; height: 2px; background-color: #610f1e; }
