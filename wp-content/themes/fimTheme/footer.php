@@ -28,7 +28,7 @@
 
 </div><!-- .site -->
 
-<?php wp_footer(); ?>
+<script scr="<?php bloginfo( 'template_directory' ); ?>/assets/js/plugins/bootstrap.min.js"></script>
 
 </body>
 </html>

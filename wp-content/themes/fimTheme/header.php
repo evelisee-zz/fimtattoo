@@ -16,6 +16,8 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<link href='<?php bloginfo( 'template_directory' ); ?>/assets/css/style.css' rel='stylesheet'>
+	<link href='<?php bloginfo( 'template_directory' ); ?>/assets/css/plugins/bootstrap.min.css' rel='stylesheet'>
+	<link href='<?php bloginfo( 'template_directory' ); ?>/assets/css/font-awesome.css' rel='stylesheet'>
 	<!--[if lt IE 9]>
 	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/html5.js"></script>
 	<![endif]-->
@@ -29,6 +31,12 @@
 				<img src="<?php bloginfo( 'template_directory' ); ?>/assets/img/logo.png">
 			</div>
 			<div class="content-menu oswald">
-				<?php wp_nav_menu( array( 'menu' => 'header-menu' ) ); ?>
+				<nav class="pull-left">
+					<?php wp_nav_menu( array( 'menu' => 'header-menu' ) ); ?>
+				</nav>
+				<div class="search pull-right">
+					<button class="btn-clear"><i class="fa fa-search"></i></button>
+				</div>
+				<div style="clear:both;"></div>
 			</div>
 		</header>

@@ -34,6 +34,11 @@ Description: Used to style the TinyMCE editor.
 		margin:0 auto;
 	}
 
+	.btn-clear{
+		border:0;
+		background-color:transparent;
+	}
+
 //..............
 // Header
 //..............
@@ -43,12 +48,14 @@ Description: Used to style the TinyMCE editor.
 		margin-top: 40px;
 	}
 	.content-menu{
-		margint-top:45px;
+		margin-top:45px;
 		background-color: #61111e;
 		display: block;
 
 		ul{
 			padding-left:0;
+			margin:0;
+			margin-left: 20px;
 		}
 
 		li{
@@ -66,7 +73,7 @@ Description: Used to style the TinyMCE editor.
 
 		li:first-child::before{
 			position: absolute;
-			top: 14px;
+			top: 11px;
 			content: '';
 			height: 24px;
 			margin-right: 11px;
@@ -77,12 +84,25 @@ Description: Used to style the TinyMCE editor.
 
 		li::after{
 			position: absolute;
-			top: 14px;
+			top: 11px;
 			content: '';
 			height: 24px;
 			margin-left: 12px;
 			width: 2px;
 			background-color: black;
+		}
+
+		.search{
+			margin: 9px 15px 0 0;
+
+			button{
+				background-color:white;
+				color:#61111e;
+				border-radius: 50%;
+				padding: 3px 6px;
+
+				i{font-size:15px;}
+			}
 		}
 	}
 

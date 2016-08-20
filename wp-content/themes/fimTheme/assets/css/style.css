@@ -13,14 +13,19 @@ body { padding: 0px; margin: 0px; }
 
 .holder { max-width: 950px; margin: 0 auto; }
 
+.btn-clear { border: 0; background-color: transparent; }
+
 .content-logo { display: block; text-align: center; margin-top: 40px; }
 
-.content-menu { margint-top: 45px; background-color: #61111e; display: block; }
-.content-menu ul { padding-left: 0; }
+.content-menu { margin-top: 45px; background-color: #61111e; display: block; }
+.content-menu ul { padding-left: 0; margin: 0; margin-left: 20px; }
 .content-menu li { display: inline-block; position: relative; padding: 12px 12px; }
 .content-menu li a { text-decoration: none; color: white; text-transform: uppercase; }
 .content-menu li:first-child a { padding-left: 11px; }
-.content-menu li:first-child::before { position: absolute; top: 14px; content: ''; height: 24px; margin-right: 11px; width: 2px; background-color: black; }
-.content-menu li::after { position: absolute; top: 14px; content: ''; height: 24px; margin-left: 12px; width: 2px; background-color: black; }
+.content-menu li:first-child::before { position: absolute; top: 11px; content: ''; height: 24px; margin-right: 11px; width: 2px; background-color: black; }
+.content-menu li::after { position: absolute; top: 11px; content: ''; height: 24px; margin-left: 12px; width: 2px; background-color: black; }
+.content-menu .search { margin: 9px 15px 0 0; }
+.content-menu .search button { background-color: white; color: #61111e; border-radius: 50%; padding: 3px 6px; }
+.content-menu .search button i { font-size: 15px; }
 
 .home { background-color: #111111; }
