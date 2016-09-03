@@ -15,41 +15,9 @@
 	  <div class="grid-item">
 	  	<img src="<?php bloginfo( 'template_directory' ); ?>/assets/img/test-img3.png">
 	  </div>
-	  <div class="grid-item grid-item--width2">
-	  	<img src="<?php bloginfo( 'template_directory' ); ?>/assets/img/test-img2.png">
-	  </div>
-	  <div class="grid-item">
-	  	<img src="<?php bloginfo( 'template_directory' ); ?>/assets/img/test-img.png">
-	  </div>
-	  	  <div class="grid-item">
-	  	<img src="<?php bloginfo( 'template_directory' ); ?>/assets/img/test-img3.png">
-	  </div>
-	  <div class="grid-item grid-item--width2">
-	  	<img src="<?php bloginfo( 'template_directory' ); ?>/assets/img/test-img2.png">
-	  </div>
-	  <div class="grid-item">
-	  	<img src="<?php bloginfo( 'template_directory' ); ?>/assets/img/test-img.png">
-	  </div>
-	  	  <div class="grid-item">
-	  	<img src="<?php bloginfo( 'template_directory' ); ?>/assets/img/test-img3.png">
-	  </div>
-	  <div class="grid-item grid-item--width2">
-	  	<img src="<?php bloginfo( 'template_directory' ); ?>/assets/img/test-img2.png">
-	  </div>
-	  <div class="grid-item">
-	  	<img src="<?php bloginfo( 'template_directory' ); ?>/assets/img/test-img.png">
-	  </div>
-	  	  <div class="grid-item">
-	  	<img src="<?php bloginfo( 'template_directory' ); ?>/assets/img/test-img3.png">
-	  </div>
-	  <div class="grid-item grid-item--width2">
-	  	<img src="<?php bloginfo( 'template_directory' ); ?>/assets/img/test-img2.png">
-	  </div>
-	  <div class="grid-item">
-	  	<img src="<?php bloginfo( 'template_directory' ); ?>/assets/img/test-img.png">
-	  </div>
 	</div>
-</div>
+
+	<?php lista_posts(); ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php

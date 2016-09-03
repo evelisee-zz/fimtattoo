@@ -16,46 +16,53 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
 
-		<?php if ( have_posts() ) : ?>
+<div class="container">
+	
+	<div class="row">
 
-			<?php if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-			<?php endif; ?>
+    	<section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 ">
 
-			<?php
-			// Start the loop.
-			while ( have_posts() ) : the_post();
+        	<article role="pge-title-content">
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'content', get_post_format() );
+            	<header>
 
-			// End the loop.
-			endwhile;
+                	<h2><span>avana</span> A Brand new Agency.</h2>
 
-			// Previous/next page navigation.
-			the_posts_pagination( array(
-				'prev_text'          => __( 'Previous page', 'twentyfifteen' ),
-				'next_text'          => __( 'Next page', 'twentyfifteen' ),
-				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentyfifteen' ) . ' </span>',
-			) );
+                </header>
 
-		// If no content, include the "No posts found" template.
-		else :
-			get_template_part( 'content', 'none' );
+                <p>This is the story of Avana, a minimal Bootstrap template for creative agency.</p>
 
-		endif;
-		?>
+            </article>
+        </section>
 
-		</main><!-- .site-main -->
-	</div><!-- .content-area -->
+        
+
+        <section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 grid">
+
+        	<figure class="effect-oscar">
+
+            	<img src="images/home-images/image-1.jpg" alt="" class="img-responsive"/>
+
+                <figcaption>
+
+                	<h2>Eliana Dedda<span> Identity</span></h2>
+
+					<p>Personal Brand Identity.</p>
+
+					<a href="works-details.html">View more</a>
+
+                </figcaption>
+
+            </figure>
+
+        </section>
+
+        
+
+        <div class="clearfix"></div>
+
+	</div>
+</div>
 
 <?php get_footer(); ?>

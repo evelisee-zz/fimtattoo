@@ -34,6 +34,12 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 660;
 }
 
+
+add_theme_support( 'post-thumbnails' );
+add_image_size( 'foto', 300,	9999,	true	);
+add_image_size( 'foto1', 400,	400,	true	);
+
+
 /**
  * Twenty Fifteen only works in WordPress 4.1 or later.
  */
@@ -367,3 +373,41 @@ require get_template_directory() . '/inc/template-tags.php';
  * @since Twenty Fifteen 1.0
  */
 require get_template_directory() . '/inc/customizer.php';
+
+
+function lista_posts(){
+	$posts = new WP_Query( array(
+		'post_type'				=> 'inspiracao',
+		'order'					=> 'ASC'
+	));
+
+	if( $posts->have_posts() ) {
+		while( $posts->have_posts() ) {
+			$posts->the_post();
+			$titulo					= get_the_title();
+			$categorias				= get_the_category($posts->ID);
+			$Data					= get_the_date('Y-m-d');
+			$tatuador				= types_render_field( "tatuador" );
+
+			foreach( $categorias as $category ) {
+				echo '<span>' . $category->name . '</span><br />';
+			}
+
+			echo 'Titulo: ' . $titulo . '<br/>';
+			echo 'Categoria: ' . $categoria  . '<br/>';
+			echo 'Data: ' . $Data  . '<br/>';
+			echo 'tatuador: ' . $tatuador  . '<br/>';
+
+
+			if( has_post_thumbnail() ) {
+				echo get_the_post_thumbnail( get_the_ID(), 'foto', array( 'alt' => get_the_title(), 'title' => get_the_title() ) );
+			} else {
+				echo '<img src="' . get_bloginfo( 'template_directory' ) . '/images/img-sliderG.jpg" alt="' . get_the_title() . '" title="' . get_the_title() . '" />';
+			}
+		}
+	} else {
+		echo "nenhum post encontrado";
+	}
+
+	wp_reset_postdata();
+}
