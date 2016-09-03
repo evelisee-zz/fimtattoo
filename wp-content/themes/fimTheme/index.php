@@ -17,52 +17,628 @@
 get_header(); ?>
 
 
-<div class="container">
-	
+<div class="container padding-top index">
+
 	<div class="row">
+		<!-- Banner Estático -->
+		<section class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
 
-    	<section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 ">
+        	<article class="content-static" role="pge-title-content">
 
-        	<article role="pge-title-content">
+            	<header class="oswald-bold">
 
-            	<header>
-
-                	<h2><span>avana</span> A Brand new Agency.</h2>
+                	<h2>Inspiração</h2>
 
                 </header>
 
-                <p>This is the story of Avana, a minimal Bootstrap template for creative agency.</p>
+                <p class="oswald-light">Esse é o fim da falta de inspiração para tatuagens.</p>
 
             </article>
         </section>
 
-        
+        <!-- 2 colina -->
+		<section class="col-xs-12 col-sm-3 col-md-3 col-lg-3 grid">
+			<ul class="grid-lod effect-2" id="grid">
+				<?php lista_posts(); ?>
+			</ul>
+		</section>
+	</div>
 
-        <section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 grid">
+
+
+</div>
+
+
+<!-- <div class="container padding-top index"> 
+	
+	<!-- <div class="row"> -->
+    
+    <!-- 	<section class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+
+        	<article class="content-static" role="pge-title-content">
+
+            	<header class="oswald-bold">
+
+                	<h2>Inspiração</h2>
+
+                </header>
+
+                <p class="oswald-light">Esse é o fim da falta de inspiração para tatuagens.</p>
+
+            </article>
+        </section>        
+
+        <section class="col-xs-12 col-sm-2 col-md-2 col-lg-2 grid">
 
         	<figure class="effect-oscar">
 
-            	<img src="images/home-images/image-1.jpg" alt="" class="img-responsive"/>
+            	<img src="http://localhost/fimtattoo/wp-content/uploads/2016/09/alice.jpg" alt="" class="img-responsive"/>
 
                 <figcaption>
 
-                	<h2>Eliana Dedda<span> Identity</span></h2>
+                	<h2 class="oswald-bold">Baleia</h2>
 
-					<p>Personal Brand Identity.</p>
+					<p class="author oswald-light">Tatuador: Lorem Ipsum</p>
 
-					<a href="works-details.html">View more</a>
+					<p class="tags oswald-light">Tags: <span>Baleia </span> <span>Animais </span></p>
+
+					<p class="date oswald-light">1 agosto 2016</p>
 
                 </figcaption>
 
             </figure>
-
         </section>
 
-        
+        <section class="col-xs-12 col-sm-2 col-md-2 col-lg-2 grid">
+
+        	<figure class="effect-oscar">
+
+            	<img src="http://localhost/fimtattoo/wp-content/uploads/2016/09/chapeleiro.jpg" alt="" class="img-responsive"/>
+
+                <figcaption>
+
+                	<h2 class="oswald-bold">Baleia</h2>
+
+					<p class="author oswald-light">Tatuador: Lorem Ipsum</p>
+
+					<p class="tags oswald-light">Tags: <span>Baleia </span> <span>Animais </span></p>
+
+					<p class="date oswald-light">1 agosto 2016</p>
+
+                </figcaption>
+            </figure>
+        </section>
+
+      	<section class="col-xs-12 col-sm-2 col-md-2 col-lg-2 grid">
+
+        	<figure class="effect-oscar">
+
+            	<img src="http://localhost/fimtattoo/wp-content/uploads/2016/09/chapeleiro.jpg" alt="" class="img-responsive"/>
+
+                <figcaption>
+
+                	<h2 class="oswald-bold">Baleia</h2>
+
+					<p class="author oswald-light">Tatuador: Lorem Ipsum</p>
+
+					<p class="tags oswald-light">Tags: <span>Baleia </span> <span>Animais </span></p>
+
+					<p class="date oswald-light">1 agosto 2016</p>
+
+                </figcaption>
+            </figure>
+        </section>
+      
+      	<section class="col-xs-12 col-sm-2 col-md-2 col-lg-2 grid">
+
+        	<figure class="effect-oscar">
+
+            	<img src="http://localhost/fimtattoo/wp-content/uploads/2016/09/chapeleiro.jpg" alt="" class="img-responsive"/>
+
+                <figcaption>
+
+                	<h2 class="oswald-bold">Baleia</h2>
+
+					<p class="author oswald-light">Tatuador: Lorem Ipsum</p>
+
+					<p class="tags oswald-light">Tags: <span>Baleia </span> <span>Animais </span></p>
+
+					<p class="date oswald-light">1 agosto 2016</p>
+
+                </figcaption>
+            </figure>
+        </section>
 
         <div class="clearfix"></div>
+ -->
+       <!--<section class="col-xs-12 col-sm-3 col-md-3 col-lg-3 grid">
+        	<ul class="grid-lod effect-2" id="grid">
 
-	</div>
-</div>
+            
+                <li>
+
+					<figure class="effect-oscar">
+
+						<img src="http://localhost/fimtattoo/wp-content/uploads/2016/09/alice.jpg" alt="" class="img-responsive"/>
+					<figcaption>
+
+						<h2 class="oswald-bold">Baleia</h2>
+
+						<p class="author oswald-light">Tatuador: Lorem Ipsum</p>
+
+						<p class="tags oswald-light">Tags: <span>Baleia </span> <span>Animais </span></p>
+
+						<p class="date oswald-light">1 agosto 2016</p>
+
+					</figcaption>
+                </li>
+                <li>
+
+					<figure class="effect-oscar">
+
+						<img src="http://localhost/fimtattoo/wp-content/uploads/2016/09/alice.jpg" alt="" class="img-responsive"/>
+					<figcaption>
+
+						<h2 class="oswald-bold">Baleia</h2>
+
+						<p class="author oswald-light">Tatuador: Lorem Ipsum</p>
+
+						<p class="tags oswald-light">Tags: <span>Baleia </span> <span>Animais </span></p>
+
+						<p class="date oswald-light">1 agosto 2016</p>
+
+					</figcaption>
+                </li>
+                <li>
+
+					<figure class="effect-oscar">
+
+						<img src="http://localhost/fimtattoo/wp-content/uploads/2016/09/alice.jpg" alt="" class="img-responsive"/>
+					<figcaption>
+
+						<h2 class="oswald-bold">Baleia</h2>
+
+						<p class="author oswald-light">Tatuador: Lorem Ipsum</p>
+
+						<p class="tags oswald-light">Tags: <span>Baleia </span> <span>Animais </span></p>
+
+						<p class="date oswald-light">1 agosto 2016</p>
+
+					</figcaption>
+                </li>
+                <li>
+
+					<figure class="effect-oscar">
+
+						<img src="http://localhost/fimtattoo/wp-content/uploads/2016/09/alice.jpg" alt="" class="img-responsive"/>
+					<figcaption>
+
+						<h2 class="oswald-bold">Baleia</h2>
+
+						<p class="author oswald-light">Tatuador: Lorem Ipsum</p>
+
+						<p class="tags oswald-light">Tags: <span>Baleia </span> <span>Animais </span></p>
+
+						<p class="date oswald-light">1 agosto 2016</p>
+
+					</figcaption>
+                </li>
+                <li>
+
+					<figure class="effect-oscar">
+
+						<img src="http://localhost/fimtattoo/wp-content/uploads/2016/09/alice.jpg" alt="" class="img-responsive"/>
+					<figcaption>
+
+						<h2 class="oswald-bold">Baleia</h2>
+
+						<p class="author oswald-light">Tatuador: Lorem Ipsum</p>
+
+						<p class="tags oswald-light">Tags: <span>Baleia </span> <span>Animais </span></p>
+
+						<p class="date oswald-light">1 agosto 2016</p>
+
+					</figcaption>
+                </li>
+                <li>
+
+					<figure class="effect-oscar">
+
+						<img src="http://localhost/fimtattoo/wp-content/uploads/2016/09/alice.jpg" alt="" class="img-responsive"/>
+					<figcaption>
+
+						<h2 class="oswald-bold">Baleia</h2>
+
+						<p class="author oswald-light">Tatuador: Lorem Ipsum</p>
+
+						<p class="tags oswald-light">Tags: <span>Baleia </span> <span>Animais </span></p>
+
+						<p class="date oswald-light">1 agosto 2016</p>
+
+					</figcaption>
+                </li>              
+            </ul>
+        </section>
+
+        <section class="col-xs-12 col-sm-3 col-md-3 col-lg-3 grid">
+        	<ul class="grid-lod effect-2" id="grid">
+
+            	<li>
+
+					<figure class="effect-oscar">
+
+						<img src="http://localhost/fimtattoo/wp-content/uploads/2016/09/alice.jpg" alt="" class="img-responsive"/>
+					<figcaption>
+
+						<h2 class="oswald-bold">Baleia</h2>
+
+						<p class="author oswald-light">Tatuador: Lorem Ipsum</p>
+
+						<p class="tags oswald-light">Tags: <span>Baleia </span> <span>Animais </span></p>
+
+						<p class="date oswald-light">1 agosto 2016</p>
+
+					</figcaption>
+                </li>
+
+                <li>
+
+					<figure class="effect-oscar">
+
+						<img src="http://localhost/fimtattoo/wp-content/uploads/2016/09/alice.jpg" alt="" class="img-responsive"/>
+					<figcaption>
+
+						<h2 class="oswald-bold">Baleia</h2>
+
+						<p class="author oswald-light">Tatuador: Lorem Ipsum</p>
+
+						<p class="tags oswald-light">Tags: <span>Baleia </span> <span>Animais </span></p>
+
+						<p class="date oswald-light">1 agosto 2016</p>
+
+					</figcaption>
+                </li>
+                <li>
+
+					<figure class="effect-oscar">
+
+						<img src="http://localhost/fimtattoo/wp-content/uploads/2016/09/alice.jpg" alt="" class="img-responsive"/>
+					<figcaption>
+
+						<h2 class="oswald-bold">Baleia</h2>
+
+						<p class="author oswald-light">Tatuador: Lorem Ipsum</p>
+
+						<p class="tags oswald-light">Tags: <span>Baleia </span> <span>Animais </span></p>
+
+						<p class="date oswald-light">1 agosto 2016</p>
+
+					</figcaption>
+                </li>
+                <li>
+
+					<figure class="effect-oscar">
+
+						<img src="http://localhost/fimtattoo/wp-content/uploads/2016/09/alice.jpg" alt="" class="img-responsive"/>
+					<figcaption>
+
+						<h2 class="oswald-bold">Baleia</h2>
+
+						<p class="author oswald-light">Tatuador: Lorem Ipsum</p>
+
+						<p class="tags oswald-light">Tags: <span>Baleia </span> <span>Animais </span></p>
+
+						<p class="date oswald-light">1 agosto 2016</p>
+
+					</figcaption>
+                </li>
+                <li>
+
+					<figure class="effect-oscar">
+
+						<img src="http://localhost/fimtattoo/wp-content/uploads/2016/09/alice.jpg" alt="" class="img-responsive"/>
+					<figcaption>
+
+						<h2 class="oswald-bold">Baleia</h2>
+
+						<p class="author oswald-light">Tatuador: Lorem Ipsum</p>
+
+						<p class="tags oswald-light">Tags: <span>Baleia </span> <span>Animais </span></p>
+
+						<p class="date oswald-light">1 agosto 2016</p>
+
+					</figcaption>
+                </li>
+                <li>
+
+					<figure class="effect-oscar">
+
+						<img src="http://localhost/fimtattoo/wp-content/uploads/2016/09/alice.jpg" alt="" class="img-responsive"/>
+					<figcaption>
+
+						<h2 class="oswald-bold">Baleia</h2>
+
+						<p class="author oswald-light">Tatuador: Lorem Ipsum</p>
+
+						<p class="tags oswald-light">Tags: <span>Baleia </span> <span>Animais </span></p>
+
+						<p class="date oswald-light">1 agosto 2016</p>
+
+					</figcaption>
+                </li>
+                <li>
+
+					<figure class="effect-oscar">
+
+						<img src="http://localhost/fimtattoo/wp-content/uploads/2016/09/alice.jpg" alt="" class="img-responsive"/>
+					<figcaption>
+
+						<h2 class="oswald-bold">Baleia</h2>
+
+						<p class="author oswald-light">Tatuador: Lorem Ipsum</p>
+
+						<p class="tags oswald-light">Tags: <span>Baleia </span> <span>Animais </span></p>
+
+						<p class="date oswald-light">1 agosto 2016</p>
+
+					</figcaption>
+                </li>              
+            </ul>
+        </section>
+
+        <section class="col-xs-12 col-sm-3 col-md-3 col-lg-3 grid">
+        	<ul class="grid-lod effect-2" id="grid">
+
+            	<li>
+
+					<figure class="effect-oscar">
+
+						<img src="http://localhost/fimtattoo/wp-content/uploads/2016/09/alice.jpg" alt="" class="img-responsive"/>
+					<figcaption>
+
+						<h2 class="oswald-bold">Baleia</h2>
+
+						<p class="author oswald-light">Tatuador: Lorem Ipsum</p>
+
+						<p class="tags oswald-light">Tags: <span>Baleia </span> <span>Animais </span></p>
+
+						<p class="date oswald-light">1 agosto 2016</p>
+
+					</figcaption>
+                </li>
+
+                <li>
+
+					<figure class="effect-oscar">
+
+						<img src="http://localhost/fimtattoo/wp-content/uploads/2016/09/alice.jpg" alt="" class="img-responsive"/>
+					<figcaption>
+
+						<h2 class="oswald-bold">Baleia</h2>
+
+						<p class="author oswald-light">Tatuador: Lorem Ipsum</p>
+
+						<p class="tags oswald-light">Tags: <span>Baleia </span> <span>Animais </span></p>
+
+						<p class="date oswald-light">1 agosto 2016</p>
+
+					</figcaption>
+                </li>
+                <li>
+
+					<figure class="effect-oscar">
+
+						<img src="http://localhost/fimtattoo/wp-content/uploads/2016/09/alice.jpg" alt="" class="img-responsive"/>
+					<figcaption>
+
+						<h2 class="oswald-bold">Baleia</h2>
+
+						<p class="author oswald-light">Tatuador: Lorem Ipsum</p>
+
+						<p class="tags oswald-light">Tags: <span>Baleia </span> <span>Animais </span></p>
+
+						<p class="date oswald-light">1 agosto 2016</p>
+
+					</figcaption>
+                </li>
+                <li>
+
+					<figure class="effect-oscar">
+
+						<img src="http://localhost/fimtattoo/wp-content/uploads/2016/09/alice.jpg" alt="" class="img-responsive"/>
+					<figcaption>
+
+						<h2 class="oswald-bold">Baleia</h2>
+
+						<p class="author oswald-light">Tatuador: Lorem Ipsum</p>
+
+						<p class="tags oswald-light">Tags: <span>Baleia </span> <span>Animais </span></p>
+
+						<p class="date oswald-light">1 agosto 2016</p>
+
+					</figcaption>
+                </li>
+                <li>
+
+					<figure class="effect-oscar">
+
+						<img src="http://localhost/fimtattoo/wp-content/uploads/2016/09/alice.jpg" alt="" class="img-responsive"/>
+					<figcaption>
+
+						<h2 class="oswald-bold">Baleia</h2>
+
+						<p class="author oswald-light">Tatuador: Lorem Ipsum</p>
+
+						<p class="tags oswald-light">Tags: <span>Baleia </span> <span>Animais </span></p>
+
+						<p class="date oswald-light">1 agosto 2016</p>
+
+					</figcaption>
+                </li>
+                <li>
+
+					<figure class="effect-oscar">
+
+						<img src="http://localhost/fimtattoo/wp-content/uploads/2016/09/alice.jpg" alt="" class="img-responsive"/>
+					<figcaption>
+
+						<h2 class="oswald-bold">Baleia</h2>
+
+						<p class="author oswald-light">Tatuador: Lorem Ipsum</p>
+
+						<p class="tags oswald-light">Tags: <span>Baleia </span> <span>Animais </span></p>
+
+						<p class="date oswald-light">1 agosto 2016</p>
+
+					</figcaption>
+                </li>
+                <li>
+
+					<figure class="effect-oscar">
+
+						<img src="http://localhost/fimtattoo/wp-content/uploads/2016/09/alice.jpg" alt="" class="img-responsive"/>
+					<figcaption>
+
+						<h2 class="oswald-bold">Baleia</h2>
+
+						<p class="author oswald-light">Tatuador: Lorem Ipsum</p>
+
+						<p class="tags oswald-light">Tags: <span>Baleia </span> <span>Animais </span></p>
+
+						<p class="date oswald-light">1 agosto 2016</p>
+
+					</figcaption>
+                </li>              
+            </ul>
+        </section>
+
+        <section class="col-xs-12 col-sm-3 col-md-3 col-lg-3 grid">
+        	<ul class="grid-lod effect-2" id="grid">
+
+            	<li>
+
+					<figure class="effect-oscar">
+
+						<img src="http://localhost/fimtattoo/wp-content/uploads/2016/09/alice.jpg" alt="" class="img-responsive"/>
+					<figcaption>
+
+						<h2 class="oswald-bold">Baleia</h2>
+
+						<p class="author oswald-light">Tatuador: Lorem Ipsum</p>
+
+						<p class="tags oswald-light">Tags: <span>Baleia </span> <span>Animais </span></p>
+
+						<p class="date oswald-light">1 agosto 2016</p>
+
+					</figcaption>
+                </li>
+
+                <li>
+
+					<figure class="effect-oscar">
+
+						<img src="http://localhost/fimtattoo/wp-content/uploads/2016/09/alice.jpg" alt="" class="img-responsive"/>
+					<figcaption>
+
+						<h2 class="oswald-bold">Baleia</h2>
+
+						<p class="author oswald-light">Tatuador: Lorem Ipsum</p>
+
+						<p class="tags oswald-light">Tags: <span>Baleia </span> <span>Animais </span></p>
+
+						<p class="date oswald-light">1 agosto 2016</p>
+
+					</figcaption>
+                </li>
+                <li>
+
+					<figure class="effect-oscar">
+
+						<img src="http://localhost/fimtattoo/wp-content/uploads/2016/09/alice.jpg" alt="" class="img-responsive"/>
+					<figcaption>
+
+						<h2 class="oswald-bold">Baleia</h2>
+
+						<p class="author oswald-light">Tatuador: Lorem Ipsum</p>
+
+						<p class="tags oswald-light">Tags: <span>Baleia </span> <span>Animais </span></p>
+
+						<p class="date oswald-light">1 agosto 2016</p>
+
+					</figcaption>
+                </li>
+                <li>
+
+					<figure class="effect-oscar">
+
+						<img src="http://localhost/fimtattoo/wp-content/uploads/2016/09/alice.jpg" alt="" class="img-responsive"/>
+					<figcaption>
+
+						<h2 class="oswald-bold">Baleia</h2>
+
+						<p class="author oswald-light">Tatuador: Lorem Ipsum</p>
+
+						<p class="tags oswald-light">Tags: <span>Baleia </span> <span>Animais </span></p>
+
+						<p class="date oswald-light">1 agosto 2016</p>
+
+					</figcaption>
+                </li>
+                <li>
+
+					<figure class="effect-oscar">
+
+						<img src="http://localhost/fimtattoo/wp-content/uploads/2016/09/alice.jpg" alt="" class="img-responsive"/>
+					<figcaption>
+
+						<h2 class="oswald-bold">Baleia</h2>
+
+						<p class="author oswald-light">Tatuador: Lorem Ipsum</p>
+
+						<p class="tags oswald-light">Tags: <span>Baleia </span> <span>Animais </span></p>
+
+						<p class="date oswald-light">1 agosto 2016</p>
+
+					</figcaption>
+                </li>
+                <li>
+
+					<figure class="effect-oscar">
+
+						<img src="http://localhost/fimtattoo/wp-content/uploads/2016/09/alice.jpg" alt="" class="img-responsive"/>
+					<figcaption>
+
+						<h2 class="oswald-bold">Baleia</h2>
+
+						<p class="author oswald-light">Tatuador: Lorem Ipsum</p>
+
+						<p class="tags oswald-light">Tags: <span>Baleia </span> <span>Animais </span></p>
+
+						<p class="date oswald-light">1 agosto 2016</p>
+
+					</figcaption>
+                </li>
+                <li>
+
+					<figure class="effect-oscar">
+
+						<img src="http://localhost/fimtattoo/wp-content/uploads/2016/09/alice.jpg" alt="" class="img-responsive"/>
+					<figcaption>
+
+						<h2 class="oswald-bold">Baleia</h2>
+
+						<p class="author oswald-light">Tatuador: Lorem Ipsum</p>
+
+						<p class="tags oswald-light">Tags: <span>Baleia </span> <span>Animais </span></p>
+
+						<p class="date oswald-light">1 agosto 2016</p>
+
+					</figcaption>
+                </li>              
+            </ul>
+        </section>
+ -->
+	<!-- </div> -->
+<!-- </div> -->
 
 <?php get_footer(); ?>

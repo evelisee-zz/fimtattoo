@@ -16,6 +16,8 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<link href='<?php bloginfo( 'template_directory' ); ?>/assets/css/style.css' rel='stylesheet'>
+	<link href='<?php bloginfo( 'template_directory' ); ?>/assets/css/effects.css' rel='stylesheet'>
+	<link href='<?php bloginfo( 'template_directory' ); ?>/assets/css/component.css' rel='stylesheet'>
 	<link href='<?php bloginfo( 'template_directory' ); ?>/assets/css/plugins/bootstrap.min.css' rel='stylesheet'>
 	<link href='<?php bloginfo( 'template_directory' ); ?>/assets/css/font-awesome.css' rel='stylesheet'>
 	<!--[if lt IE 9]>

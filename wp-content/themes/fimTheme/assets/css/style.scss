@@ -42,6 +42,9 @@ Description: Used to style the TinyMCE editor.
 	.rtio-btn{
 		border-radius:50%;
 	}
+	.padding-top{
+		padding-top: 15px;
+	}
 
 //..............
 // Header
@@ -166,8 +169,51 @@ Description: Used to style the TinyMCE editor.
 // Home
 //..............
 	.home{
+		ul{padding-left:0; margin: 0;}
 		background-color: #111111;
 	}
 	.grid-item {
 	  margin: 10px;
+	}
+	.content-static{
+		text-transform: uppercase;
+		background-color: #61111e;
+		padding:10px;
+		header {color:white;}
+		p {color: #bfbeac}
+	}
+
+	.index{
+		section.col-sm-2, section.col-sm-3 {
+			height: initial!important;
+			color:white;
+
+			img{
+				width: 100%;
+			}
+			p{
+				margin: 3px;
+				font-size: 14px;
+			}
+			h2{
+				margin-top: 0;
+				text-transform: uppercase;
+			}
+			.author, .tags, .date{
+				text-transform: uppercase;
+			}
+			.tags {
+				span{font-weight:bold;}
+				span::after{
+					content: "/";
+					display: inline-block;
+				}
+
+				span:last-child::after{
+					content: "/ [...]";
+					font-weight: bold;
+					display: inline-block;
+				}
+			}
+		}
 	}

@@ -10,14 +10,6 @@
  */
 ?>
 <div class="container">
-	<div class="static-banner">Static banner</div>
-	<div class="grid">
-	  <div class="grid-item">
-	  	<img src="<?php bloginfo( 'template_directory' ); ?>/assets/img/test-img3.png">
-	  </div>
-	</div>
-
-	<?php lista_posts(); ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php

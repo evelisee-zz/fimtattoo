@@ -389,21 +389,26 @@ function lista_posts(){
 			$Data					= get_the_date('Y-m-d');
 			$tatuador				= types_render_field( "tatuador" );
 
-			foreach( $categorias as $category ) {
-				echo '<span>' . $category->name . '</span><br />';
-			}
+			echo '<li>'; 
+			echo '<figure class="effect-oscar">';
+				if( has_post_thumbnail() ) {
+					echo get_the_post_thumbnail( get_the_ID(), 'foto', array( 'alt' => get_the_title(), 'title' => get_the_title(),  'class' => 'img-responsive',  ) );
+				} else {
+					echo '<img src="' . get_bloginfo( 'template_directory' ) . '/images/img-sliderG.jpg" alt="' . get_the_title() . '" title="' . get_the_title() . '" />';
+				} 
+			echo '<figcaption>';
+			echo '<h2 class="oswald-bold">' .  $titulo  . '</h2>';
+			echo '<p class="author oswald-light">Tatuador:' . $tatuador . '</p>';
+			echo '<p class="tags oswald-light">Tags:';
+				foreach( $categorias as $category ) {
+					echo '<span>' . $category->name . '</span>';
+				}
+			echo '</p>';
+			echo '<p class="date oswald-light"> ' . $Data . '</p>';
+			echo '</figcaption>';
+			// echo '</figure>';
+			echo '</li>';
 
-			echo 'Titulo: ' . $titulo . '<br/>';
-			echo 'Categoria: ' . $categoria  . '<br/>';
-			echo 'Data: ' . $Data  . '<br/>';
-			echo 'tatuador: ' . $tatuador  . '<br/>';
-
-
-			if( has_post_thumbnail() ) {
-				echo get_the_post_thumbnail( get_the_ID(), 'foto', array( 'alt' => get_the_title(), 'title' => get_the_title() ) );
-			} else {
-				echo '<img src="' . get_bloginfo( 'template_directory' ) . '/images/img-sliderG.jpg" alt="' . get_the_title() . '" title="' . get_the_title() . '" />';
-			}
 		}
 	} else {
 		echo "nenhum post encontrado";

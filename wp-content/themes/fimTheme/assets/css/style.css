@@ -17,6 +17,8 @@ body { padding: 0px; margin: 0px; }
 
 .rtio-btn { border-radius: 50%; }
 
+.padding-top { padding-top: 15px; }
+
 .content-logo { display: block; text-align: center; margin-top: 40px; }
 
 .content-button { display: block; }
@@ -43,5 +45,19 @@ body { padding: 0px; margin: 0px; }
 #colophon::before { width: 100%; margin: 20px 0; display: block; content: ''; height: 2px; background-color: #610f1e; }
 
 .home { background-color: #111111; }
+.home ul { padding-left: 0; margin: 0; }
 
 .grid-item { margin: 10px; }
+
+.content-static { text-transform: uppercase; background-color: #61111e; padding: 10px; }
+.content-static header { color: white; }
+.content-static p { color: #bfbeac; }
+
+.index section.col-sm-2, .index section.col-sm-3 { height: initial !important; color: white; }
+.index section.col-sm-2 img, .index section.col-sm-3 img { width: 100%; }
+.index section.col-sm-2 p, .index section.col-sm-3 p { margin: 3px; font-size: 14px; }
+.index section.col-sm-2 h2, .index section.col-sm-3 h2 { margin-top: 0; text-transform: uppercase; }
+.index section.col-sm-2 .author, .index section.col-sm-2 .tags, .index section.col-sm-2 .date, .index section.col-sm-3 .author, .index section.col-sm-3 .tags, .index section.col-sm-3 .date { text-transform: uppercase; }
+.index section.col-sm-2 .tags span, .index section.col-sm-3 .tags span { font-weight: bold; }
+.index section.col-sm-2 .tags span::after, .index section.col-sm-3 .tags span::after { content: "/"; display: inline-block; }
+.index section.col-sm-2 .tags span:last-child::after, .index section.col-sm-3 .tags span:last-child::after { content: "/ [...]"; font-weight: bold; display: inline-block; }
