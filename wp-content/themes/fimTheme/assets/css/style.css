@@ -9,7 +9,7 @@ Description: Used to style the TinyMCE editor.
 
 .oswald-light { font-family: 'Oswald', sans-serif; font-weight: 300; }
 
-body { padding: 0px; margin: 0px; }
+body { padding: 0px; margin: 0px; background-color: #111111 !important; }
 
 .holder { max-width: 950px; margin: 0 auto; }
 
@@ -44,7 +44,6 @@ body { padding: 0px; margin: 0px; }
 
 #colophon::before { width: 100%; margin: 20px 0; display: block; content: ''; height: 2px; background-color: #610f1e; }
 
-.home { background-color: #111111; }
 .home ul { padding-left: 0; margin: 0; }
 
 .grid-item { margin: 10px; }
