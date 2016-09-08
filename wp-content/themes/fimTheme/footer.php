@@ -33,7 +33,7 @@
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/plugins/bootstrap.js"></script>
-<script src="https://npmcdn.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script>
+<script src="https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script>
 <script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/functions.js"></script>
 
 </body>
