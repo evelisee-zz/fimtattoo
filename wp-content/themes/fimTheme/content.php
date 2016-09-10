@@ -9,15 +9,21 @@
  * @since Twenty Fifteen 1.0
  */
 ?>
-<div class="container">
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+	
+
+
+<article id="post-<?php the_ID(); ?>" class="col-sm-12" >
 	<?php
 		// Post thumbnail.
 		twentyfifteen_post_thumbnail();
 	?>
 
 	<header class="entry-header">
+		<div class="data">
+			
+		</div>
 		<?php
 			if ( is_single() ) :
 				the_title( '<h1 class="entry-title">', '</h1>' );
@@ -54,3 +60,5 @@
 	?>
 
 </article><!-- #post-## -->
+
+
