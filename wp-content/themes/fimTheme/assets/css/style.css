@@ -52,11 +52,11 @@ body { padding: 0px; margin: 0px; background-color: #111111 !important; }
 .content-static header { color: white; }
 .content-static p { color: #bfbeac; }
 
-.index section.col-sm-2, .index section.col-sm-3 { height: initial !important; color: white; }
-.index section.col-sm-2 img, .index section.col-sm-3 img { width: 100%; }
-.index section.col-sm-2 p, .index section.col-sm-3 p { margin: 3px; font-size: 14px; }
-.index section.col-sm-2 h2, .index section.col-sm-3 h2 { margin-top: 0; text-transform: uppercase; }
-.index section.col-sm-2 .author, .index section.col-sm-2 .tags, .index section.col-sm-2 .date, .index section.col-sm-3 .author, .index section.col-sm-3 .tags, .index section.col-sm-3 .date { text-transform: uppercase; }
-.index section.col-sm-2 .tags span, .index section.col-sm-3 .tags span { font-weight: bold; }
-.index section.col-sm-2 .tags span::after, .index section.col-sm-3 .tags span::after { content: "/"; display: inline-block; }
-.index section.col-sm-2 .tags span:last-child::after, .index section.col-sm-3 .tags span:last-child::after { content: "/ [...]"; font-weight: bold; display: inline-block; }
+.index section.col-sm-2, .index section.col-sm-3, .index section.col-sm-12 { height: initial !important; color: white; }
+.index section.col-sm-2 img, .index section.col-sm-3 img, .index section.col-sm-12 img { width: 100%; }
+.index section.col-sm-2 p, .index section.col-sm-3 p, .index section.col-sm-12 p { margin: 3px; font-size: 14px; }
+.index section.col-sm-2 h2, .index section.col-sm-3 h2, .index section.col-sm-12 h2 { margin-top: 0; text-transform: uppercase; }
+.index section.col-sm-2 .author, .index section.col-sm-2 .tags, .index section.col-sm-2 .date, .index section.col-sm-3 .author, .index section.col-sm-3 .tags, .index section.col-sm-3 .date, .index section.col-sm-12 .author, .index section.col-sm-12 .tags, .index section.col-sm-12 .date { text-transform: uppercase; }
+.index section.col-sm-2 .tags span, .index section.col-sm-3 .tags span, .index section.col-sm-12 .tags span { font-weight: bold; }
+.index section.col-sm-2 .tags span::after, .index section.col-sm-3 .tags span::after, .index section.col-sm-12 .tags span::after { content: "/"; display: inline-block; }
+.index section.col-sm-2 .tags span:last-child::after, .index section.col-sm-3 .tags span:last-child::after, .index section.col-sm-12 .tags span:last-child::after { content: "/ [...]"; font-weight: bold; display: inline-block; }
