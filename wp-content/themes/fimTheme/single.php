@@ -26,38 +26,25 @@ get_header(); ?>
 				get_template_part( 'content', get_post_format() );
 
 				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-
-				// Previous/next post navigation.
-				the_post_navigation( array(
-					'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'twentyfifteen' ) . '</span> ' .
-						'<span class="screen-reader-text">' . __( 'Next post:', 'twentyfifteen' ) . '</span> ' .
-						'<span class="post-title">%title</span>',
-					'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'twentyfifteen' ) . '</span> ' .
-						'<span class="screen-reader-text">' . __( 'Previous post:', 'twentyfifteen' ) . '</span> ' .
-						'<span class="post-title">%title</span>',
-				) );
+			
 
 			// End the loop.
 			endwhile;
 			?>
-
 			</main><!-- .site-main -->
 		</div><!-- .content-area -->
 
-
 		<div class="col-sm-5">
 			<div class="container-bio">
+
 				<figure class="image-author col-sm-3">
-					<img src="">
+					<?php echo userphoto_the_author_photo(); ?>
 				</figure>
 				<div class="content-about col-sm-9">
 					<h4 class="oswald">Postado por</h4>
-					<h5>Nome do fulano</h5>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua.</p>
+					<h5>  <?php echo get_the_author(); ?></h5>
+					<p>  <?php $id_author = get_the_author_ID(); $user_info = get_userdata($id_author); echo $user_info->description ?>
+					</p>
 				</div>
 
 				<div style="clear:both;"></div>
@@ -66,7 +53,7 @@ get_header(); ?>
 		<div class="col-sm-4">
 			<div class="container-tags">
 				<h4 class="oswald">Tags</h4>
-				<p> <a href="">#tag </a> <a href="">#tag </a> <a href="">#tag </a></p>
+				<p> <?php echo the_tags(); ?></p>
 			</div>
 		</div>
 		<div class="col-sm-3">

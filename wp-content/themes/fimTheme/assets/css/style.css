@@ -25,6 +25,8 @@ body { padding: 0px; margin: 0px; background-color: #111111 !important; }
 
 .content-grey { background-color: #eeeeee; margin: 20px 0; padding: 40px 0; }
 
+._ohe .lfloat { display: none !important; }
+
 .content-logo { display: block; text-align: center; margin-top: 40px; }
 
 .content-button { display: block; }
@@ -75,16 +77,17 @@ body { padding: 0px; margin: 0px; background-color: #111111 !important; }
 .blog .blog-article:hover .data { background-color: #61111e; }
 .blog .blog-article:hover .container-text p, .blog .blog-article:hover h2, .blog .blog-article:hover a { color: white; }
 .blog figure { position: relative; }
-.blog figure img { width: 100%; }
+.blog figure img { width: 100%; height: auto; min-height: 400px; max-height: 400px; }
 .blog .data { background-color: #404040; padding: 20px; text-align: center; position: absolute; bottom: 0; }
 .blog .data p { margin: 0; color: white; }
 .blog .data p:first-child { font-size: 26px; }
 .blog .data p:last-child { text-transform: uppercase; font-size: 15px; }
-.blog .container-text { padding: 15px; }
+.blog .container-text { padding: 15px; min-height: 250px; }
+.blog .container-text p a { display: none !important; }
 .blog .container-text a { display: block; color: black; text-decoration: none; font-size: 14px; text-align: center; }
 
 .container-bio { background: white; border: 1px solid #c0c0c0; padding: 10px; }
-.container-bio figure { border-radius: 50%; background: #ddd; height: 103px; }
+.container-bio figure img { margin-top: 10px; height: 82px; width: 100%; border-radius: 50%; }
 .container-bio h4 { color: #404040; font-size: 12px; margin: 5px 0; text-transform: uppercase; }
 .container-bio h5 { font-size: 14px; margin: 2px 0; color: #404040; }
 .container-bio p { font-size: 13px; margin: 2px 0; color: #404040; }

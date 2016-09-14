@@ -25,7 +25,7 @@ get_header();
     </div>
 
     <!-- All Banners -->
-    <div class="row no-margin">
+    <div class="no-margin">
     	<?php lista_blog(); ?>
     </div>
 </div>
