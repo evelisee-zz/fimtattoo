@@ -18,7 +18,26 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
+<div class="container padding-top no-padding blog">
+	<!-- Static banner -->
+	<div class="row no-margin">
+		<section class="col-xs-12 no-padding">
+	    	<article class="content-static" role="pge-title-content">
+	        	<header class="oswald-bold">
+	            	<h2>Novidades</h2>
+	            	<p class="oswald-light">informações, entrevistas, eventos, e muito mais.</p>
+	            </header>
+	        </article>
+	    </section>
+    </div>
+
+    <!-- All Banners -->
+    <div class="no-margin">
+    	<?php lista_blog(); ?>
+    </div>
+</div>
+
+	<section id="primary" class="col-sm-12">
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>

@@ -3,6 +3,7 @@ Theme Name: FimTheme
 Description: Used to style the TinyMCE editor.
 */
 @import "https://fonts.googleapis.com/css?family=Oswald:300,400,700";
+@import "https://fonts.googleapis.com/css?family=Roboto";
 .oswald { font-family: 'Oswald', sans-serif; font-weight: 400; }
 
 .oswald-bold { font-family: 'Oswald', sans-serif; font-weight: 700; }
@@ -86,12 +87,57 @@ body { padding: 0px; margin: 0px; background-color: #111111 !important; }
 .blog .container-text p a { display: none !important; }
 .blog .container-text a { display: block; color: black; text-decoration: none; font-size: 14px; text-align: center; }
 
-.container-bio { background: white; border: 1px solid #c0c0c0; padding: 10px; }
+.header-image { position: relative; }
+
+.header-post h1 { color: #404040; }
+
+.post-thumbnail { max-height: 500px; overflow: hidden; }
+.post-thumbnail img { width: 100%; height: auto; }
+
+.date-post { background-color: #404040; padding: 20px; text-align: center; position: absolute; bottom: 0; }
+.date-post p { margin: 0; color: white; }
+.date-post p:first-child { font-size: 26px; }
+.date-post p:last-child { text-transform: uppercase; font-size: 15px; }
+
+.content-blog h2 { border-bottom: 1px solid #bfbeac; margin: 0; padding: 10px 0; }
+.content-blog p { font-family: 'Roboto'; }
+.content-blog h2, .content-blog h3, .content-blog h4, .content-blog h5, .content-blog h6 { font-family: 'Roboto'; color: #696867; }
+
+.container-bio { background: white; border: 1px solid #c0c0c0; padding: 10px; min-height: 120px; max-height: 150px; }
 .container-bio figure img { margin-top: 10px; height: 82px; width: 100%; border-radius: 50%; }
 .container-bio h4 { color: #404040; font-size: 12px; margin: 5px 0; text-transform: uppercase; }
-.container-bio h5 { font-size: 14px; margin: 2px 0; color: #404040; }
-.container-bio p { font-size: 13px; margin: 2px 0; color: #404040; }
+.container-bio h5 { font-family: 'Roboto'; font-size: 14px; margin: 2px 0; color: #404040; }
+.container-bio p { font-family: 'Roboto'; font-size: 13px; margin: 2px 0; color: #404040; }
 
-.container-tags { background: white; min-height: 127px; border: 1px solid #c0c0c0; padding: 10px; }
+.container-tags { background: white; min-height: 127px; border: 1px solid #c0c0c0; padding: 10px; min-height: 120px; max-height: 150px; }
 .container-tags h4 { color: #404040; font-size: 12px; margin: 5px 0; text-transform: uppercase; }
-.container-tags p a { font-size: 12px; color: #61111e; }
+.container-tags p a { font-size: 12px; color: #61111e; font-family: 'Roboto'; }
+.container-tags a::before { content: '#'; }
+
+.container-share { padding: 10px; min-height: 120px; max-height: 150px; }
+.container-share p { color: #61111e; font-size: 14px; margin: 0; padding: 10px 0; text-align: center; border-bottom: 1px solid #bfbeac; text-transform: uppercase; }
+.container-share .ssba { margin: 10px; }
+.container-share img.ssba.ssba-img { width: 30px; margin: 2px; border-radius: 5px; }
+
+.about-post { margin-top: 60px; width: 100%; display: inline-block; }
+
+.coments span._50f7 { display: none !important; }
+
+.coments { margin-top: 10px; border-top: 1px solid #bfbeac; }
+
+.contato .header img { width: 100%; }
+.contato .content-fim { padding: 30px; background: #61111e; width: 100%; color: white; }
+.contato .content-fim h1.fixed-content { font-size: 2.5em; }
+.contato .content-fim h2.fixed-content { text-transform: uppercase; }
+.contato .content-fim p.fixed-content { font-family: 'Roboto'; font-size: 20px; }
+.contato .content-contact { width: 80%; margin: 0 auto; }
+.contato .content-contact h1 { font-size: 2.4em; text-transform: uppercase; color: white; }
+.contato .content-contact p.fixed-content { font-size: 1.4em; color: white; font-family: 'Roboto'; }
+.contato input.contact-form, .contato textarea { width: 90%; background: transparent; font-weight: initial; outline: none; color: white; font-family: 'Roboto'; border: 0; border-bottom: 1px solid #61111e; }
+.contato textarea { height: 28px; resize: none; width: 100%; font-family: "Roboto" !important; font-weight: normal !important; color: white !important; }
+.contato .name, .contato .email { width: 50%; }
+.contato .message { width: 100%; }
+.contato input[type="submit"] { padding: 13px 54px; background: #61111e; border: 0; text-transform: uppercase; color: white; font-family: 'Oswald', sans-serif; font-weight: 300; }
+.contato .screen-reader-response { display: none !important; }
+.contato .wpcf7-not-valid-tip { color: #61111e; float: left; }
+.contato .wpcf7-response-output { color: white; }

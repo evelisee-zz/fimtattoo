@@ -34,31 +34,6 @@ get_header(); ?>
 			</main><!-- .site-main -->
 		</div><!-- .content-area -->
 
-		<div class="col-sm-5">
-			<div class="container-bio">
-
-				<figure class="image-author col-sm-3">
-					<?php echo userphoto_the_author_photo(); ?>
-				</figure>
-				<div class="content-about col-sm-9">
-					<h4 class="oswald">Postado por</h4>
-					<h5>  <?php echo get_the_author(); ?></h5>
-					<p>  <?php $id_author = get_the_author_ID(); $user_info = get_userdata($id_author); echo $user_info->description ?>
-					</p>
-				</div>
-
-				<div style="clear:both;"></div>
-			</div>
-		</div>
-		<div class="col-sm-4">
-			<div class="container-tags">
-				<h4 class="oswald">Tags</h4>
-				<p> <?php echo the_tags(); ?></p>
-			</div>
-		</div>
-		<div class="col-sm-3">
-			<p>Compartilhe</p>
-		</div>
 	</div>
 </div>
 

@@ -484,6 +484,8 @@ function lista_artistas(){
 		'posts_per_page'		=> 10
 	));
 
+	echo '<div class="row">';
+
 	if( $posts->have_posts() ) {
 		while( $posts->have_posts() ) {
 			$posts->the_post();
@@ -494,8 +496,12 @@ function lista_artistas(){
 			$dia					= get_the_date('j');
 			$mes 					= get_the_date('F');
 			$ano 					= get_the_date('Y');
+
+			if(($index % 2) == 1){
+				echo '</div><div class="row">';
+			}
 				
-		echo '<section class="col-xs-12 col-sm-6 padding-top">';
+			echo '<section class="col-xs-12 col-sm-6 padding-top">';
 				echo '<article class="blog-article">';
 					echo '<figure>';
 						echo '<div class="data">';
