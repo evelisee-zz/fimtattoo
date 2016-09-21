@@ -7,4 +7,17 @@ $(document).ready(function($){
 	  itemSelector: '.grid-item',
 	  columnWidth: 40,
 	});
+
+	$(".fancy").fancybox({
+		autoSize: false,
+    	openEffect	: 'elastic',
+    	closeEffect	: 'elastic',
+
+    	helpers : {
+    		title : {
+    			type : 'inside'
+    		}
+    	}
+    });
+
 })

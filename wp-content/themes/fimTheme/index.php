@@ -21,7 +21,7 @@ get_header(); ?>
 
 	<div class="row">
 		<!-- Banner Estático -->
-		<section class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+		<section class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
         	<article class="content-static" role="pge-title-content">
             	<header class="oswald-bold">
                 	<h2>Inspiração</h2>
@@ -29,25 +29,25 @@ get_header(); ?>
                 <p class="oswald-light">Esse é o fim da falta de inspiração para tatuagens.</p>
             </article>
 
-			<section class="col-xs-12 col-sm-12 col-md-12 col-lg-12 grid padding-top">
+			<section class="col-xs-6 col-sm-6 col-md-6 col-lg-6 grid padding-top">
 				<?php lista_posts(0); ?>
+			</section>
+
+			<section class="col-xs-6 col-sm-6 col-md-6 col-lg-6 grid padding-top">
+				<?php lista_posts(1); ?>
 			</section>
 
         </section>
 
-        <!-- 2 colina -->
-		<section class="col-xs-12 col-sm-3 col-md-3 col-lg-3 grid">
-			<?php lista_posts(0); ?>
-		</section>
 
 		<!-- 3 colina -->
 		<section class="col-xs-12 col-sm-3 col-md-3 col-lg-3 grid">
-			<?php lista_posts(1); ?>
+			<?php lista_posts(2); ?>
 		</section>
 
 		<!-- 4 colina -->
 		<section class="col-xs-12 col-sm-3 col-md-3 col-lg-3 grid">
-			<?php lista_posts(2); ?>
+			<?php lista_posts(3); ?>
 		</section>
 	</div>
 </div>

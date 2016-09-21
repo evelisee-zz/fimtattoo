@@ -24,8 +24,10 @@ get_header(); ?>
 		<section class="col-xs-12 no-padding">
 	    	<article class="content-static" role="pge-title-content">
 	        	<header class="oswald-bold">
-	            	<h2>Novidades</h2>
-	            	<p class="oswald-light">informações, entrevistas, eventos, e muito mais.</p>
+	            	<?php
+						the_archive_title( '<h2>', '</h2>' );
+						the_archive_description( '<p class="oswald-light">', '</p>' );
+					?>
 	            </header>
 	        </article>
 	    </section>
@@ -33,51 +35,47 @@ get_header(); ?>
 
     <!-- All Banners -->
     <div class="no-margin">
-    	<?php lista_blog(); ?>
+    	
+		<?php 
+
+			echo '<div class="row">';
+			while ( have_posts() ) : the_post();
+
+				if(($index % 2) == 1){
+					echo '</div><div class="row">';
+				}
+
+				echo '<section class="col-xs-12 col-sm-6 padding-top">';
+					echo '<article class="blog-article">';
+						echo '<figure>';
+							echo '<div class="data">';
+								echo '<p class="oswald-bold">' . get_the_date('j') . '</p>';
+								echo '<p class="oswald">'. get_the_date('F') . '  ' . get_the_date('Y') .'</p>';
+							echo '</div>';
+									if( has_post_thumbnail() ) {
+										echo get_the_post_thumbnail( get_the_ID(), 'foto1', array( 'alt' => get_the_title(), 'title' => get_the_title(),  'class' => 'img-responsive',  ) );
+									} else {
+										echo '<img src="' . get_bloginfo( 'template_directory' ) . '/images/img-sliderG.jpg" alt="' . get_the_title() . '" title="' . get_the_title() . '" />';
+									} 
+			    			
+		    			echo '</figure>';
+
+		    			echo '<div class="container-text">';
+		    				echo '<h2 class="oswald-bold">' .  get_the_title(). '</h2>';
+		    				echo '<p>'.  get_the_excerpt($posts->ID) .'</p>';
+		    				echo '<a href="'. get_permalink( get_the_ID() ) .'" class="oswald">Leia mais [+]</a>';
+		    			echo '</div>';
+					echo '</article>';
+				echo '</section>';
+
+			endwhile;
+
+			wp_reset_postdata();
+
+		?>
     </div>
 </div>
 
-	<section id="primary" class="col-sm-12">
-		<main id="main" class="site-main" role="main">
 
-		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
-
-			<?php
-			// Start the Loop.
-			while ( have_posts() ) : the_post();
-
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'content', get_post_format() );
-
-			// End the loop.
-			endwhile;
-
-			// Previous/next page navigation.
-			the_posts_pagination( array(
-				'prev_text'          => __( 'Previous page', 'twentyfifteen' ),
-				'next_text'          => __( 'Next page', 'twentyfifteen' ),
-				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentyfifteen' ) . ' </span>',
-			) );
-
-		// If no content, include the "No posts found" template.
-		else :
-			get_template_part( 'content', 'none' );
-
-		endif;
-		?>
-
-		</main><!-- .site-main -->
-	</section><!-- .content-area -->
 
 <?php get_footer(); ?>

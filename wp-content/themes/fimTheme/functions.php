@@ -393,6 +393,7 @@ function lista_posts($remove){
 					$tatuador				= types_render_field( "tatuador" );
 					
 					echo '<li>'; 
+						echo '<a class="fancy" href="' . get_the_post_thumbnail_url() . '" title="Título: <span>'. $titulo .'</span><br/> Tatuador:  <span>'. $tatuador . '</span><br/>">';
 						echo '<figure class="effect-oscar">';
 							if( has_post_thumbnail() ) {
 								echo get_the_post_thumbnail( get_the_ID(), 'foto1', array( 'alt' => get_the_title(), 'title' => get_the_title(),  'class' => 'img-responsive',  ) );
@@ -409,6 +410,7 @@ function lista_posts($remove){
 						echo '</p>';
 						echo '<p class="date oswald-light"> ' . $Data . '</p>';
 						echo '</figcaption>';
+						echo '</a>';
 						// echo '</figure>';
 					echo '</li>';
 				}
@@ -531,6 +533,59 @@ function lista_artistas(){
 
 	wp_reset_postdata();
 }
+
+function post_relacionados($postID, $postTax){
+	$convertArray = explode(',', $postTax);
+
+	$posts = new WP_Query( array(
+		'post_type'				=> 'tatuador',
+		'order'					=> 'ASC',
+		'posts_per_page'		=> 2,
+		'post__not_in' => array($postID),
+		'tax_query' => array(
+			array(
+				'taxonomy' => 'estilo',
+				'field'    => 'term_id',
+				'terms'    => $convertArray
+			),
+		)
+	));
+
+
+	if( $posts->have_posts() ) {
+		while( $posts->have_posts() ) {
+			$posts->the_post();
+			$titulo					= get_the_title();
+			$image 					= get_the_post_thumbnail();
+			
+			echo '<div class="col-sm-2">';
+				echo '<div class="container-posts box">';
+
+					echo '<a href="'. get_permalink( get_the_ID() ) .'" class="oswald">';
+						if( has_post_thumbnail() ) {
+							echo get_the_post_thumbnail( get_the_ID(), 'foto1', array( 'alt' => get_the_title(), 'title' => get_the_title(),  'class' => 'img-responsive',  ) );
+						} else {
+							echo '<img src="' . get_bloginfo( 'template_directory' ) . '/images/img-sliderG.jpg" alt="' . get_the_title() . '" title="' . get_the_title() . '" />';
+						}
+				
+
+						echo '<span class="caption full-caption">';
+							echo '<h3>' . get_the_title() . '</h3>';
+						echo '</span>';
+					echo '</a>';
+				echo '</div>';
+			echo '</div>';
+		}
+
+	} else {
+		echo "nenhum post encontrado";
+	}
+
+	wp_reset_postdata();
+}
+
+
+
 
 
 

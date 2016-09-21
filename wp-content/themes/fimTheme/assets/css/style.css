@@ -62,14 +62,17 @@ body { padding: 0px; margin: 0px; background-color: #111111 !important; }
 .content-static header { color: white; }
 .content-static p { color: #bfbeac; }
 
-.index section.col-sm-2, .index section.col-sm-3, .index section.col-sm-12 { height: initial !important; color: white; }
-.index section.col-sm-2 img, .index section.col-sm-3 img, .index section.col-sm-12 img { width: 100%; }
-.index section.col-sm-2 p, .index section.col-sm-3 p, .index section.col-sm-12 p { margin: 3px; font-size: 14px; }
-.index section.col-sm-2 h2, .index section.col-sm-3 h2, .index section.col-sm-12 h2 { margin-top: 0; text-transform: uppercase; }
-.index section.col-sm-2 .author, .index section.col-sm-2 .tags, .index section.col-sm-2 .date, .index section.col-sm-3 .author, .index section.col-sm-3 .tags, .index section.col-sm-3 .date, .index section.col-sm-12 .author, .index section.col-sm-12 .tags, .index section.col-sm-12 .date { text-transform: uppercase; }
-.index section.col-sm-2 .tags span, .index section.col-sm-3 .tags span, .index section.col-sm-12 .tags span { font-weight: bold; }
-.index section.col-sm-2 .tags span::after, .index section.col-sm-3 .tags span::after, .index section.col-sm-12 .tags span::after { content: "/"; display: inline-block; }
-.index section.col-sm-2 .tags span:last-child::after, .index section.col-sm-3 .tags span:last-child::after, .index section.col-sm-12 .tags span:last-child::after { content: "/ [...]"; font-weight: bold; display: inline-block; }
+.fancybox-title { font-size: 14px !important; }
+.fancybox-title span { font-family: 'Oswald'; color: #61111e; }
+
+.index .grid { height: initial !important; color: white; }
+.index .grid img { width: 100%; }
+.index .grid p { margin: 3px; font-size: 14px; }
+.index .grid h2 { margin-top: 0; text-transform: uppercase; }
+.index .grid .author, .index .grid .tags, .index .grid .date { text-transform: uppercase; }
+.index .grid .tags span { font-weight: bold; }
+.index .grid .tags span::after { content: "/"; display: inline-block; }
+.index .grid .tags span:last-child::after { content: "/ [...]"; font-weight: bold; display: inline-block; }
 
 .blog .content-static h2 { margin: 5px; display: inline-block; }
 .blog .content-static p { display: inline-block; padding-left: 20px; }
@@ -102,6 +105,7 @@ body { padding: 0px; margin: 0px; background-color: #111111 !important; }
 .content-blog h2 { border-bottom: 1px solid #bfbeac; margin: 0; padding: 10px 0; }
 .content-blog p { font-family: 'Roboto'; }
 .content-blog h2, .content-blog h3, .content-blog h4, .content-blog h5, .content-blog h6 { font-family: 'Roboto'; color: #696867; }
+.content-blog strong { color: #610f1e; display: block; text-transform: uppercase; }
 
 .container-bio { background: white; border: 1px solid #c0c0c0; padding: 10px; min-height: 120px; max-height: 150px; }
 .container-bio figure img { margin-top: 10px; height: 82px; width: 100%; border-radius: 50%; }
@@ -124,6 +128,18 @@ body { padding: 0px; margin: 0px; background-color: #111111 !important; }
 .coments span._50f7 { display: none !important; }
 
 .coments { margin-top: 10px; border-top: 1px solid #bfbeac; }
+
+.container-maisposts { background-color: #61111e; color: white; padding: 23px 20px; height: 148px; }
+.container-maisposts h3 { font-size: 24px; margin: 13px 0; text-transform: uppercase; }
+
+.single-tatuador .container-tags { min-height: 148px; }
+.single-tatuador .box:hover .full-caption { -moz-transform: translateY(100%); -o-transform: translateY(100%); -webkit-transform: translateY(100%); opacity: 1; transform: translateY(100%); }
+.single-tatuador .box { position: relative; overflow: hidden; }
+.single-tatuador .box .full-caption { width: 100%; height: 160px; top: -171px; text-align: left; padding: 15px; }
+.single-tatuador .box .caption { background-color: rgba(97, 17, 30, 0.8); position: absolute; color: #fff; z-index: 100; -webkit-transition: all 300ms ease-out; -moz-transition: all 300ms ease-out; -o-transition: all 300ms ease-out; -ms-transition: all 300ms ease-out; transition: all 300ms ease-out; left: 0; }
+.single-tatuador .box .caption h3 { text-transform: uppercase; padding-top: 20px; }
+
+.container-posts img { height: 148px; }
 
 .contato .header img { width: 100%; }
 .contato .content-fim { padding: 30px; background: #61111e; width: 100%; color: white; }
