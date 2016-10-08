@@ -391,28 +391,36 @@ function lista_posts($remove){
 					$categorias				= get_the_category($posts->ID);
 					$Data					= get_the_date('Y-m-d');
 					$tatuador				= types_render_field( "tatuador" );
-					
+					$aqui					= 'as';
+
+					$asasassa = "";
+
+					foreach( $categorias as $category ) {
+						$asasassa .= '<button href="'. get_site_url() . '/category/' . $category->slug .'"><span>' . $category->name . '</span></button>';
+					}
+
 					echo '<li>'; 
-						echo '<a class="fancy" href="' . get_the_post_thumbnail_url() . '" title="Título: <span>'. $titulo .'</span><br/> Tatuador:  <span>'. $tatuador . '</span><br/>">';
-						echo '<figure class="effect-oscar">';
-							if( has_post_thumbnail() ) {
-								echo get_the_post_thumbnail( get_the_ID(), 'foto1', array( 'alt' => get_the_title(), 'title' => get_the_title(),  'class' => 'img-responsive',  ) );
-							} else {
-								echo '<img src="' . get_bloginfo( 'template_directory' ) . '/images/img-sliderG.jpg" alt="' . get_the_title() . '" title="' . get_the_title() . '" />';
-							} 
-						echo '<figcaption>';
-						echo '<h2 class="oswald-bold">' .  $titulo  . '</h2>';
-						echo '<p class="author oswald-light">Tatuador:' . $tatuador . '</p>';
-						echo '<p class="tags oswald-light">Tags:';
-							foreach( $categorias as $category ) {
-								echo '<span>' . $category->name . '</span>';
-							}
-						echo '</p>';
-						echo '<p class="date oswald-light"> ' . $Data . '</p>';
-						echo '</figcaption>';
+						echo '<a class="fancy" href="' . get_the_post_thumbnail_url() . '" title="Título: <span>'. $titulo .'</span><br/> Tatuador:  <span>'. $tatuador . '</span><br/>Tags:  <p></p>">';
+							echo '<figure class="effect-oscar">';
+								if( has_post_thumbnail() ) {
+									echo get_the_post_thumbnail( get_the_ID(), 'foto1', array( 'alt' => get_the_title(), 'title' => get_the_title(),  'class' => 'img-responsive',  ) );
+								} else {
+									echo '<img src="' . get_bloginfo( 'template_directory' ) . '/images/img-sliderG.jpg" alt="' . get_the_title() . '" title="' . get_the_title() . '" />';
+								}
+
+								echo '<figcaption>';
+									echo '<h2 class="oswald-bold">' .  $titulo  . '</h2>';
+									echo '<p class="author oswald-light">Tatuador:' . $tatuador . '</p>';
+									echo '<p class="tags oswald-light">Tags:';
+										echo $asasassa;
+									echo '</p>';
+									echo '<p class="date oswald-light"> ' . $Data . '</p>';
+								echo '</figcaption>';
+
+							echo '</figure>';
 						echo '</a>';
-						// echo '</figure>';
-					echo '</li>';
+							
+				echo '</li>';
 				}
 			echo '</ul>';
 	} else {

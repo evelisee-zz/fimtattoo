@@ -62,7 +62,7 @@
 			<p><?php the_terms( $postID, 'estilo', '', ', ', ' ' ); ?></p>
 		</div>
 	</div>
-	<div class="col-sm-3" style="float:right;">
+	<div class="col-sm-3 share" style="float:right;">
 		<div class="container-share">
 			<p class="oswald">Compartilhe</p>
 			<?php echo do_shortcode('[ssba]'); ?>

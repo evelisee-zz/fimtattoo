@@ -20,4 +20,21 @@ $(document).ready(function($){
     	}
     });
 
+	// $(".container .row ul li a.fancy").click( function(){
+	// 	$(".fancybox-wrap .fancybox-title p").html('');
+	// 	$(".fancybox-wrap .fancybox-title span:nth-of-type(3)").html("AAAA");
+	// 	console.log("clicou!");
+
+	// 	var tagsEl = $(this).parent().find(".tags");
+
+	// 	console.log(tagsEl);
+
+	// 	setTimeout(function(){
+	// 		$(".fancybox-wrap .fancybox-title p").html(tagsEl);
+	// 	}, 10);
+
+    	
+	// });
+
+
 })
