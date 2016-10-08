@@ -8,6 +8,18 @@ $(document).ready(function($){
 	  columnWidth: 40,
 	});
 
+ var container = document.querySelector('#masonry');
+	var masonry = new Masonry(container, {
+	    // columnWidth: 20,
+	    itemSelector: '.item',
+	    percentPosition: true,
+	    gutter: 10,
+	      masonry: {
+		    // use outer width of grid-sizer for columnWidth
+		    columnWidth: '.item'
+		  }
+	 });
+
 	$(".fancy").fancybox({
 		autoSize: false,
     	openEffect	: 'elastic',
