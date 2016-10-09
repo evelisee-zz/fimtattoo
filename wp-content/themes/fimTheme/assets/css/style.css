@@ -62,7 +62,7 @@ body { padding: 0px; margin: 0px; background-color: #111111 !important; }
 
 .item { width: 50px; height: 50px; float: left; }
 
-.item.medium { margin-bottom: 10px; width: 24%; height: auto; background: #A6E392; }
+.item.medium { margin-bottom: 10px; width: 24%; height: auto; }
 .item.medium img { width: 100%; }
 .item.medium figure { margin: 0; }
 
@@ -77,6 +77,7 @@ body { padding: 0px; margin: 0px; background-color: #111111 !important; }
 .index .grid img { width: 100%; }
 .index .grid p { margin: 3px; font-size: 13px; }
 .index .grid h2 { word-spacing: inherit; margin-top: 0; font-size: 1em; text-transform: uppercase; }
+.index .grid .author button { text-transform: uppercase !important; }
 .index .grid .author, .index .grid .tags, .index .grid .date { text-transform: uppercase; }
 .index .grid .tags button { font-weight: initial !important; display: inline-block; padding: 0; }
 .index .grid .tags button { font-weight: bold; }
@@ -111,7 +112,11 @@ body { padding: 0px; margin: 0px; background-color: #111111 !important; }
 .date-post p:first-child { font-size: 26px; }
 .date-post p:last-child { text-transform: uppercase; font-size: 15px; }
 
+.content-blog .wp-caption { margin-top: 10px !important; background: #ddd; padding: 5px; }
+.content-blog .wp-caption img { width: 100%; }
+.content-blog .wp-caption figcaption { font-size: 12px; margin-top: 10px; color: #696867; }
 .content-blog .alignleft { float: left; margin: 10px; }
+.content-blog .aligncenter { display: block; margin: 0 auto; }
 .content-blog .alignright { float: right; margin: 10px; }
 .content-blog .contact-artists { background-color: #61111e; color: white; padding: 5px; margin: 5px; border-radius: 5px; display: inline-block; }
 .content-blog h2 { border-bottom: 1px solid #bfbeac; margin: 0; padding: 10px 0; }

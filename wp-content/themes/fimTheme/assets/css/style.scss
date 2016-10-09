@@ -234,7 +234,7 @@ Description: Used to style the TinyMCE editor.
 		margin-bottom: 10px;
 		width: 24%;
 		height: auto;
-		background: #A6E392;
+		// background: #A6E392;
 
 		img{
 			width: 100%;
@@ -282,6 +282,9 @@ Description: Used to style the TinyMCE editor.
 				margin-top: 0;
 				font-size: 1em;
 				text-transform: uppercase;
+			}
+			.author button{
+				text-transform: uppercase!important;
 			}
 			.author, .tags, .date{
 				text-transform: uppercase;
@@ -421,9 +424,26 @@ Description: Used to style the TinyMCE editor.
 
 	//conteudo
 	.content-blog{
+		.wp-caption{
+			margin-top: 10px!important;
+			background: #ddd;
+			padding: 5px;
+			img{
+				    width: 100%;
+			}
+			figcaption{
+				font-size: 12px;
+				margin-top: 10px;
+				color: #696867;
+			}
+		}
 		.alignleft{
 			float:left;
 			margin: 10px;
+		}
+		.aligncenter{
+			display: block;
+			margin: 0 auto;
 		}
 		.alignright{
 			float:right;

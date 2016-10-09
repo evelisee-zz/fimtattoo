@@ -491,7 +491,7 @@ function lista_posts($remove){
 function lista_blog(){
 	$posts = new WP_Query( array(
 		'post_type'				=> 'post',
-		'order'					=> 'ASC',
+		'order'					=> 'DESC',
 		'posts_per_page'		=> 10
 	));
 
