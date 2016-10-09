@@ -386,10 +386,11 @@ function lista_posts_home(){
 	// echo '<ul class="grid-lod effect-2" id="grid">';
 		while( $posts->have_posts() ) {
 			$posts->the_post();
+			$link 					= types_render_field( "link-do-tatuador", array('output' => 'raw')  );
 			$titulo					= get_the_title();
 			$categorias				= get_the_category($posts->ID);
 			$Data					= get_the_date('d-m-Y');
-			$tatuador				= types_render_field( "tatuador" );
+			$tatuador				= types_render_field( "tatuador");
 
 			$asasassa = "";
 
@@ -400,7 +401,8 @@ function lista_posts_home(){
 			echo do_shortcode('[ajax_load_more post_type="inspiracao" post_format="image"]');
 
 			echo '<div class="item medium grid">'; 
-					echo '<a class="fancy" href="' . get_the_post_thumbnail_url() . '" title="Título: <span>'. $titulo .'</span><br/> Tatuador:  <span>'. $tatuador . '</span><br/>Tags:  <p></p>">';
+					// echo '<a class="fancy" href="' . get_the_post_thumbnail_url() . '" title="Título: <span>'. $titulo .'</span><br/> Tatuador:  <span>'. $tatuador . '</span><br/>Tags:  <p></p>">';
+					echo '<a class="fancy" href="' . get_the_post_thumbnail_url() . '" title="'. $titulo . '">';
 						echo '<figure class="effect-oscar">';
 							if( has_post_thumbnail() ) {
 								echo get_the_post_thumbnail( get_the_ID(), 'foto1', array( 'alt' => get_the_title(), 'title' => get_the_title(),  'class' => 'img-responsive' ) );
@@ -409,7 +411,8 @@ function lista_posts_home(){
 							}
 						echo '<figcaption>';
 							echo '<h2 class="oswald-bold">' .  $titulo  . '</h2>';
-							echo '<p class="author oswald-light">Tatuador:' . $tatuador . '</p>';
+							echo '<p class="author oswald-light"><button formaction="' . $link .'">Tatuador:' . $tatuador . '</button></p>';
+							// echo '<p style="display:none"></p>';
 							echo '<p class="tags oswald-light">Tags:';
 								echo $asasassa;
 							echo '</p>';

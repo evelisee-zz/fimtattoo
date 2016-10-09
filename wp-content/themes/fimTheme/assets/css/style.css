@@ -47,15 +47,15 @@ body { padding: 0px; margin: 0px; background-color: #111111 !important; }
 .content-menu .search label .checkboxes { font-size: 12px; font-weight: initial; display: inline-block; }
 .content-menu .search label .checkboxes label { padding-left: 0; }
 .content-menu .search label .holder-hidden { display: inline-block; padding-left: 8px; }
-.content-menu .search label .search-input { font-family: 'Roboto'; font-weight: initial; background: transparent; border: 0; border-bottom: 1px solid #61111e; outline: none; }
+.content-menu .search label .search-input { font-size: 12px; font-family: 'Roboto'; font-weight: initial; background: transparent; border: 0; border-bottom: 1px solid #61111e; outline: none; }
 .content-menu .search label .search-button-active { background: #333; color: white; }
 .content-menu .search button { outline: none; background-color: white; color: #61111e; border-radius: 50%; width: 30px; height: 30px; line-height: 28px; }
 .content-menu .search button i { font-size: 15px; }
 
 #colophon { text-align: center; }
-#colophon button { transition: 0.6s all; background-color: #610f1e !important; color: white; display: inline-block; width: 40px; height: 40px; line-height: 40px; font-size: 20px; margin: 0 6px; font-size: 20px; border-radius: 100%; text-align: center; }
-#colophon button i { font-size: 19px !important; }
-#colophon button:hover { background-color: white !important; color: #61111e; transition-duration: 0.6s; transition-property: all; }
+#colophon a { transition: 0.6s all; background-color: #610f1e !important; color: white; display: inline-block; width: 40px; height: 40px; line-height: 40px; font-size: 20px; margin: 0 6px; font-size: 20px; border-radius: 100%; text-align: center; }
+#colophon a i { font-size: 19px !important; }
+#colophon a:hover { background-color: white !important; color: #61111e; transition-duration: 0.6s; transition-property: all; }
 #colophon .copyright { color: #bfbeac; font-size: 12px; }
 
 #colophon::before { width: 100%; margin: 20px 0; display: block; content: ''; height: 2px; background-color: #61111e; }
@@ -76,7 +76,7 @@ body { padding: 0px; margin: 0px; background-color: #111111 !important; }
 .index .grid { height: initial !important; color: white; }
 .index .grid img { width: 100%; }
 .index .grid p { margin: 3px; font-size: 13px; }
-.index .grid h2 { margin-top: 0; font-size: 1em; text-transform: uppercase; }
+.index .grid h2 { word-spacing: inherit; margin-top: 0; font-size: 1em; text-transform: uppercase; }
 .index .grid .author, .index .grid .tags, .index .grid .date { text-transform: uppercase; }
 .index .grid .tags button { font-weight: initial !important; display: inline-block; padding: 0; }
 .index .grid .tags button { font-weight: bold; }
@@ -122,7 +122,7 @@ body { padding: 0px; margin: 0px; background-color: #111111 !important; }
 .content-blog strong { color: #610f1e; display: block; text-transform: uppercase; }
 
 .container-bio { background: white; border: 1px solid #c0c0c0; padding: 10px; min-height: 120px; max-height: 150px; }
-.container-bio figure img { margin-top: 10px; height: 82px; width: 100%; border-radius: 50%; }
+.container-bio figure img { margin: 10px; height: 82px; width: 82px; float: left; border-radius: 50%; }
 .container-bio h4 { color: #404040; font-size: 12px; margin: 5px 0; text-transform: uppercase; }
 .container-bio h5 { font-family: 'Roboto'; font-size: 14px; margin: 2px 0; color: #404040; }
 .container-bio p { font-family: 'Roboto'; font-size: 13px; margin: 2px 0; color: #404040; }

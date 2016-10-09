@@ -45,13 +45,16 @@
 	<div class="col-sm-5">
 		<div class="container-bio">
 
-			<figure class="image-author col-sm-3">
+			<figure class="image-author">
 				<?php echo userphoto_the_author_photo(); ?>
 			</figure>
-			<div class="content-about col-sm-9">
+			<div class="content-about">
 				<h4 class="oswald">Postado por</h4>
 				<h5>  <?php echo get_the_author(); ?></h5>
-				<p>  <?php $id_author = get_the_author_ID(); $user_info = get_userdata($id_author); echo $user_info->description ?>
+				<p>  <?php $id_author = get_the_author_ID(); 
+						   $user_info = get_userdata($id_author); 
+							echo $user_info->description ?>
+					<a href="<?php echo get_blogs_of_user($id_author ); ?>"><i class="fa fa-link"></i></a>
 				</p>
 			</div>
 

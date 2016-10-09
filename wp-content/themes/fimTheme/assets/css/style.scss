@@ -152,6 +152,7 @@ Description: Used to style the TinyMCE editor.
 				.holder-hidden{display:inline-block;padding-left: 8px;}
 				//input
 				.search-input{
+					font-size:12px;
 					font-family: 'Roboto';
 					font-weight: initial;
 					background:transparent;
@@ -184,7 +185,7 @@ Description: Used to style the TinyMCE editor.
 //..............
 	#colophon{
 		text-align: center;
-		button{
+		a{
 			transition: 0.6s all;
 			background-color:#610f1e!important;
 			color: white;
@@ -224,11 +225,9 @@ Description: Used to style the TinyMCE editor.
 // Home
 //..............
 	.item {
-	width:  50px;
-	height: 50px;
-	float: left;
-	// background: #2296DD;
-	// border: 2px solid #333;
+		width:  50px;
+		height: 50px;
+		float: left;
 	}
 
 	.item.medium{
@@ -279,6 +278,7 @@ Description: Used to style the TinyMCE editor.
 				font-size: 13px;
 			}
 			h2{
+				word-spacing: inherit;
 				margin-top: 0;
 				font-size: 1em;
 				text-transform: uppercase;
@@ -474,9 +474,10 @@ Description: Used to style the TinyMCE editor.
 
 		figure{
 			img{
-				margin-top: 10px;
+				margin: 10px;
 				height: 82px;
-				width: 100%;
+				width: 82px;
+				float:left;
 				border-radius:50%;
 			}
 		}

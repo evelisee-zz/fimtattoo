@@ -35,28 +35,44 @@ $(document).ready(function($){
     //......................
     // HOME
     //......................
+	    //search box
+		    $('.search-button').click(function(){
+		    	$(this).hide();
+		    	$('.search-button-active').show();
+		    	$('.holder-hidden').show("slide");
+		    });
 
-    //search box
-	    $('.search-button').click(function(){
-	    	$(this).hide();
-	    	$('.search-button-active').show();
-	    	$('.holder-hidden').show("slide");
-	    });
+	    //Clicando fora do botão e conteudo esconde div
+			$(document).mouseup(function (e){
+				var button = $('.search-button-active');
+				var container = $('.search');
 
-    //Clicando fora do botão e conteudo esconde div
-		$(document).mouseup(function (e){
-			var button = $('.search-button-active');
-			var container = $('.search');
+				if (!button.is(e.target) && container.has(e.target).length === 0){
+					$('.holder-hidden').hide('slide');
+					$('.search-button-active').hide();
+					$('.search-button').show();
+					// container.removeClass('activated');
+				}
+			});
 
-			if (!button.is(e.target) && container.has(e.target).length === 0){
-				$('.holder-hidden').hide('slide');
-				$('.search-button-active').hide();
-				$('.search-button').show();
-				// container.removeClass('activated');
-			}
-		});
+		//Mostrando texto na Fancy box
+			$(".container .row .item a.fancy").click( function(){
+				// $('.fancybox-title').html('');
+				var titulo =  $(this).find('figcaption h2').html();
+				var autor = $(this).find('figcaption p.author').html();
+				var categorias = $(this).find('figcaption p.tags').html();
 
-	// $(".container .row ul li a.fancy").click( function(){
+				console.log(titulo);
+				var conteudo = '';
+				var conteudo = '<p><strong>' +titulo+  '</strong><br/><strong>' +autor+  '</strong><br/><strong>' +categorias+  '</strong><br/></p>';
+
+				setTimeout(function(){
+					$('.fancybox-title').html('');
+					$('.fancybox-title').append(conteudo);
+					$(conteudo).show('slow');
+				}, 10);
+
+			})
 	// 	$(".fancybox-wrap .fancybox-title p").html('');
 	// 	$(".fancybox-wrap .fancybox-title span:nth-of-type(3)").html("AAAA");
 	// 	console.log("clicou!");

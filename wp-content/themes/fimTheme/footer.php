@@ -13,18 +13,18 @@
 	</div><!-- .site-content -->
 
 	<footer id="colophon" class="container site-footer holder" role="contentinfo">	
-		<button class="rtio-btn btn-clear" data-toggle="tooltip" title="Acompanhe nossas novidades">
+		<a href="https://www.facebook.com/FIMtattoo/" target="_blank" class="rtio-btn btn-clear" data-toggle="tooltip" title="Acompanhe nossas novidades">
 			<i class="fa fa-facebook"></i>
-		</button>	
-		<button class="rtio-btn btn-clear" data-toggle="tooltip" title="Entre em contato via twitter">
+		</a>	
+		<a href="https://twitter.com/fimtattoo/" target="_blank" class="rtio-btn btn-clear" data-toggle="tooltip" title="Entre em contato via twitter">
 			<i class="fa fa-twitter"></i>
-		</button>
-		<button class="rtio-btn btn-clear" data-toggle="tooltip" title="Veja nossas fotos">
+		</a>
+		<a href="https://www.instagram.com/fimtattoo/" target="_blank" class="rtio-btn btn-clear" data-toggle="tooltip" title="Veja nossas fotos">
 			<i class="fa fa-instagram"></i>
-		</button>
-		<button class="rtio-btn btn-clear" data-toggle="tooltip" title="Acompanhe nosso canal">
+		</a>
+		<a class="rtio-btn btn-clear" data-toggle="tooltip" title="Acompanhe nosso canal">
 			<i class="fa fa-youtube-play"></i>
-		</button>
+		</a>
 
 		<p class="copyright oswald-light">&#xa9; FIM 2016</p>
 	</footer><!-- .site-footer -->
