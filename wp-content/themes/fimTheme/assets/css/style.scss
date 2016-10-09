@@ -3,38 +3,6 @@ Theme Name: FimTheme
 Description: Used to style the TinyMCE editor.
 */
 
-.item {
-        width:  50px;
-        height: 50px;
-        float: left;
-        // background: #2296DD;
-        // border: 2px solid #333;
-      }
-
-      .item.thumbnail {
-        width:  100px;
-        height: 100px;
-        background: #cfcfcf
-      }
-
-      .item.medium{
-      	img{
-      		width: 100%;
-      	}
-      	figure{
-      		margin: 0;
-      	}
-      	margin-bottom: 10px;
-		width: 19%;
-		height: auto;
-        background: #A6E392
-      }
-
-      .item.large {
-        width:  200px;
-        height: 100px;
-        background: #D092E3
-      }
 
 //...............
 // Fonts
@@ -99,6 +67,7 @@ Description: Used to style the TinyMCE editor.
 	._ohe .lfloat{
 		display:none!important;
 	}
+
 //..............
 // Header
 //..............
@@ -224,12 +193,35 @@ Description: Used to style the TinyMCE editor.
 //..............
 // Home
 //..............
-	.home{
-		ul{padding-left:0; margin: 0;}
+	.item {
+	width:  50px;
+	height: 50px;
+	float: left;
+	// background: #2296DD;
+	// border: 2px solid #333;
 	}
-	.grid-item {
-	  margin: 10px;
+
+	.item.medium{
+		margin-bottom: 10px;
+		width: 24%;
+		height: auto;
+		background: #A6E392;
+
+		img{
+			width: 100%;
+		}
+		figure{
+			margin: 0;
+		}		
 	}
+
+	
+	// .home{
+	// 	ul{padding-left:0; margin: 0;}
+	// }
+	// .grid-item {
+	//   margin: 10px;
+	// }
 	.content-static{
 		text-transform: uppercase;
 		background-color: $defaultColor;
@@ -254,28 +246,31 @@ Description: Used to style the TinyMCE editor.
 			}
 			p{
 				margin: 3px;
-				font-size: 14px;
+				font-size: 13px;
 			}
 			h2{
 				margin-top: 0;
+				font-size: 1em;
 				text-transform: uppercase;
 			}
 			.author, .tags, .date{
 				text-transform: uppercase;
 			}
 			.tags {
-				a{
+				button{
+					font-weight: initial!important;
 					display: inline-block;
+					padding:0;
 				}
-				span{font-weight:bold;}
-				span::after{
+				button{font-weight:bold;}
+				button::after{
 					content: "/";
 					display: inline-block;
 				}
 
-				span:last-child::after{
+				button:last-child::after{
 					content: "/ [...]";
-					font-weight: bold;
+					// font-weight: bold;
 					display: inline-block;
 				}
 			}
@@ -396,10 +391,33 @@ Description: Used to style the TinyMCE editor.
 
 	//conteudo
 	.content-blog{
+		.alignleft{
+			float:left;
+			margin: 10px;
+		}
+		.alignright{
+			float:right;
+			margin: 10px;
+		}
+		.contact-artists{
+			background-color: $defaultColor;
+			color:white;
+			padding: 5px;
+			margin: 5px;
+			border-radius: 5px;
+			display: inline-block;
+		}
 		h2{
 			border-bottom: 1px solid #bfbeac;
 			margin: 0;
 			padding: 10px 0;
+		}
+		a{
+			color: $defaultColor;
+		}
+		.gallery-icon img{
+			float: left;
+			margin: 10px;
 		}
 		p{
 			font-family: 'Roboto';

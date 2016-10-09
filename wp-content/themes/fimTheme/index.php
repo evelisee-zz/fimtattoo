@@ -18,7 +18,7 @@ get_header(); ?>
 
 <div class="container padding-top index">
 	<div class="row">
-		<div id='masonry'>
+		<div id='masonry' class='masonry'>
 	      <?php lista_posts_home(); ?>
 	    </div>
     </div>

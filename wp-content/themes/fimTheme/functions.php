@@ -377,9 +377,9 @@ require get_template_directory() . '/inc/customizer.php';
 function lista_posts_home(){
 	$posts = new WP_Query( array(
 		'post_type'				=> 'inspiracao',
-		'order'					=> 'ASC',
+		'order'					=> 'DESC',
 		// 'offset'				=> $remove,
-		'posts_per_page'		=> 10
+		'posts_per_page'		=> 20
 	));
 
 	if( $posts->have_posts() ) {
@@ -388,15 +388,16 @@ function lista_posts_home(){
 					$posts->the_post();
 					$titulo					= get_the_title();
 					$categorias				= get_the_category($posts->ID);
-					$Data					= get_the_date('Y-m-d');
+					$Data					= get_the_date('d-m-Y');
 					$tatuador				= types_render_field( "tatuador" );
-					$aqui					= 'as';
 
 					$asasassa = "";
 
 					foreach( $categorias as $category ) {
 						$asasassa .= '<button href="'. get_site_url() . '/category/' . $category->slug .'"><span>' . $category->name . '</span></button>';
 					}
+
+					echo do_shortcode('[ajax_load_more post_type="inspiracao" post_format="image"]');
 
 					echo '<div class="item medium grid">'; 
 							echo '<a class="fancy" href="' . get_the_post_thumbnail_url() . '" title="Título: <span>'. $titulo .'</span><br/> Tatuador:  <span>'. $tatuador . '</span><br/>Tags:  <p></p>">';
@@ -544,7 +545,7 @@ function lista_blog(){
 function lista_artistas(){
 	$posts = new WP_Query( array(
 		'post_type'				=> 'tatuador',
-		'order'					=> 'ASC',
+		'order'					=> 'DESC',
 		'posts_per_page'		=> 10
 	));
 
