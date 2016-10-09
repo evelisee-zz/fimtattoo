@@ -58,7 +58,21 @@
 						<?php wp_nav_menu( array( 'menu' => 'header-menu' ) ); ?>
 					</div>
 					<div class="search pull-right">
-						<button class="btn-clear"><i class="fa fa-search"></i></button>
+						<label>
+							<div class="holder-hidden" style="display:none;">
+								<div class="checkboxes">
+									<input type="radio" id="inspiracao" name="search-radio" value="inspiracao" checked="checked">
+										<label for="inspiracao">Inspiração</label>
+									<input type="radio" id="artistas" name="search-radio"  value="artistas">
+										<label for="artistas">Artistas</label>
+									<input type="radio" id="blog" name="search-radio" value="blog">
+										<label for="blog">Blog</label>
+								</div>
+								<input type="search" name="search-itens" class="search-input" placeholder="digite uma categoria">
+							</div>
+							<button class="btn-clear search-button"><i class="fa fa-search"></i></button>
+							<button class="btn-clear search-button-active" style="display:none;"><i class="fa fa-search"></i></button>
+						</label>
 					</div>
 				</nav>
 			</div>

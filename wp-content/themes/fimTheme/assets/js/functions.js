@@ -8,7 +8,7 @@ $(document).ready(function($){
 	  columnWidth: 40,
 	});
 
- var container = document.querySelector('#masonry');
+ 	var container = document.querySelector('#masonry');
 	var masonry = new Masonry(container, {
 	    // columnWidth: 20,
 	    itemSelector: '.item',
@@ -31,6 +31,30 @@ $(document).ready(function($){
     		}
     	}
     });
+
+    //......................
+    // HOME
+    //......................
+
+    //search box
+	    $('.search-button').click(function(){
+	    	$(this).hide();
+	    	$('.search-button-active').show();
+	    	$('.holder-hidden').show("slide");
+	    });
+
+    //Clicando fora do botão e conteudo esconde div
+		$(document).mouseup(function (e){
+			var button = $('.search-button-active');
+			var container = $('.search');
+
+			if (!button.is(e.target) && container.has(e.target).length === 0){
+				$('.holder-hidden').hide('slide');
+				$('.search-button-active').hide();
+				$('.search-button').show();
+				// container.removeClass('activated');
+			}
+		});
 
 	// $(".container .row ul li a.fancy").click( function(){
 	// 	$(".fancybox-wrap .fancybox-title p").html('');
