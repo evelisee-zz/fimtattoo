@@ -9,8 +9,9 @@
  * @since Twenty Fifteen 1.0
  */
 
-$id_author = get_the_author_ID(); 
-$user_info = get_userdata($id_author); 
+	$postID		= $post->ID;
+	$getslugid = wp_get_post_terms( $post->ID, 'estilo' );
+	$slugs = implode(', ',wp_list_pluck($getslugid,'term_id'));
 
 ?>
 
@@ -46,29 +47,8 @@ $user_info = get_userdata($id_author);
 </article><!-- #post-## -->
 
 <div class="about-post">
-	<div class="col-sm-5">
-		<div class="container-bio">
 
-			<figure class="image-author">
-				<?php echo userphoto_the_author_photo(); ?>
-			</figure>
-			<div class="content-about">
-				<h4 class="oswald">Postado por</h4>
-				<h5>  <?php echo get_the_author(); ?> | </h5>
-				<a class="link-portfolio" href="<?php echo $user_info->user_url; ?>"><i class="fa fa-globe"></i></a>	
-				<p>  <?php echo $user_info->description; ?></p>
-			</div>
-
-			<div style="clear:both;"></div>
-		</div>
-	</div>
-	<div class="col-sm-4">
-		<div class="container-tags">
-			<h4 class="oswald">Tags</h4>
-			<p> <?php echo the_tags('', ', ', '<br />'); ?></p>
-		</div>
-	</div>
-	<div class="col-sm-3">
+	<div class="col-sm-12 share">
 		<div class="container-share">
 			<p class="oswald">Compartilhe</p>
 			<?php echo do_shortcode('[ssba]'); ?>

@@ -5,11 +5,10 @@
  * @package WordPress
  * @subpackage Twenty_Fifteen
  * @since Twenty Fifteen 1.0
- * Template Name: Artistas 
+ * Template Name: Taboo 
  */
 get_header(); 
 ?>
-
 
 <div class="container padding-top no-padding blog conteudo">
 	<!-- Static banner -->
@@ -17,8 +16,8 @@ get_header();
 		<section class="col-xs-12 no-padding">
 	    	<article class="content-static" role="pge-title-content">
 	        	<header class="oswald-bold">
-	            	<h2>Artistas</h2>
-	            	<p class="oswald-light">Contanto, estilos e fotos.</p>
+	            	<h2>Taboo</h2>
+	            	<p class="oswald-light">Revistas.</p>
 	            </header>
 	        </article>
 	    </section>
@@ -26,7 +25,7 @@ get_header();
 
     <!-- All Banners -->
     <div class="no-margin">
-    	<?php lista_artistas(); ?>
+    	<?php lista_taboo(); ?>
     </div>
 </div>
 

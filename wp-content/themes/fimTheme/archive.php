@@ -23,7 +23,7 @@ get_header(); ?>
 	<div class="row no-margin">
 		<section class="col-xs-12 no-padding">
 	    	<article class="content-static" role="pge-title-content">
-	        	<header class="oswald-bold">
+	        	<header class="oswald-bold" style="height: 33px;">
 	            	<?php
 						the_archive_title( '<h2>', '</h2>' );
 						the_archive_description( '<p class="oswald-light">', '</p>' );

@@ -39,6 +39,19 @@ add_theme_support( 'post-thumbnails' );
 add_image_size( 'foto', 300,	9999,	true	);
 add_image_size( 'foto1', 500,	400,	true	);
 
+function template_chooser($template){
+	global $wp_query;
+	$post_type = get_query_var('post_type');
+	if( $wp_query->is_search && $post_type == 'tatuador' ){
+		return locate_template('search-tatuador.php');
+	}
+
+	if( $wp_query->is_search && $post_type == 'inspiracao' ){
+		return locate_template('search-inspiracao.php');
+	}
+	return $template;
+}
+add_filter('template_include', 'template_chooser'); 
 
 /**
  * Twenty Fifteen only works in WordPress 4.1 or later.
@@ -395,7 +408,7 @@ function lista_posts_home(){
 			$asasassa = "";
 
 			foreach( $categorias as $category ) {
-				$asasassa .= '<button href="'. get_site_url() . '/category/' . $category->slug .'"><span>' . $category->name . '</span></button>';
+				$asasassa .= '<button onClick= goToSection("'. get_site_url() . '/category/' . $category->slug .'")><span>' . $category->name . '</span></button>';
 			}
 
 			echo do_shortcode('[ajax_load_more post_type="inspiracao" post_format="image"]');
@@ -411,7 +424,11 @@ function lista_posts_home(){
 							}
 						echo '<figcaption>';
 							echo '<h2 class="oswald-bold">' .  $titulo  . '</h2>';
-							echo '<p class="author oswald-light"><button formaction="' . $link .'">Tatuador:' . $tatuador . '</button></p>';
+							// echo '<p class="author oswald-light"><button onclick="window.location.href=" (' .$link.')   ">Tatuador:' . $tatuador . '</button></p>';
+							echo '<p class="author oswald-light"><button onClick= goToPage("' . $link. '")>Tatuador:' . $tatuador . '</button></p>';
+
+
+
 							// echo '<p style="display:none"></p>';
 							echo '<p class="tags oswald-light">Tags:';
 								echo $asasassa;
@@ -600,6 +617,61 @@ function lista_artistas(){
 	wp_reset_postdata();
 }
 
+function lista_taboo(){
+	$posts = new WP_Query( array(
+		'post_type'				=> 'itemtaboo',
+		'order'					=> 'DESC',
+		'posts_per_page'		=> 10
+	));
+
+	echo '<div class="row">';
+
+	if( $posts->have_posts() ) {
+		while( $posts->have_posts() ) {
+			$posts->the_post();
+			$titulo					= get_the_title();
+			$resume 				= get_the_excerpt($posts->ID);
+			$image 					= get_the_post_thumbnail();
+			$categorias				= get_the_category($posts->ID);
+			$dia					= get_the_date('j');
+			$mes 					= get_the_date('F');
+			$ano 					= get_the_date('Y');
+
+			if(($index % 2) == 1){
+				echo '</div><div class="row">';
+			}
+				
+			echo '<section class="col-xs-12 col-sm-6 padding-top">';
+				echo '<article class="blog-article">';
+					echo '<figure>';
+						echo '<div class="data">';
+							echo '<p class="oswald-bold">' . $dia . '</p>';
+							echo '<p class="oswald">'. $mes . '  ' . $ano .'</p>';
+						echo '</div>';
+								if( has_post_thumbnail() ) {
+									echo get_the_post_thumbnail( get_the_ID(), 'foto1', array( 'alt' => get_the_title(), 'title' => get_the_title(),  'class' => 'img-responsive',  ) );
+								} else {
+									echo '<img src="' . get_bloginfo( 'template_directory' ) . '/images/img-sliderG.jpg" alt="' . get_the_title() . '" title="' . get_the_title() . '" />';
+								} 
+		    			
+	    			echo '</figure>';
+
+	    			echo '<div class="container-text">';
+	    				echo '<h2 class="oswald-bold">' . $titulo . '</h2>';
+	    				echo '<p>'. $resume .'</p>';
+	    				echo '<a href="'. get_permalink( get_the_ID() ) .'" class="oswald">Leia mais [+]</a>';
+	    			echo '</div>';
+				echo '</article>';
+			echo '</section>';
+		}
+
+	} else {
+		echo "nenhum post encontrado";
+	}
+
+	wp_reset_postdata();
+}
+
 function post_relacionados($postID, $postTax){
 	$convertArray = explode(',', $postTax);
 
@@ -649,9 +721,5 @@ function post_relacionados($postID, $postTax){
 
 	wp_reset_postdata();
 }
-
-
-
-
 
 

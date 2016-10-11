@@ -11,7 +11,7 @@ get_header();
 ?>
 
 
-<div class="container padding-top no-padding blog">
+<div class="container padding-top no-padding blog conteudo">
 	<!-- Static banner -->
 	<div class="row no-margin">
 		<section class="col-xs-12 no-padding">

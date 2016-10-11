@@ -17,11 +17,22 @@
 get_header(); ?>
 
 <div class="container padding-top index">
-	<div class="row">
+	<section class="col-xs-12 static-banner" style="padding:0;">
+    	<article class="content-static" role="pge-title-content">
+        	<header class="oswald-bold">
+            	<h2>Inspiração</h2>
+            	<p class="oswald-light">Esse é o fim da falta de inspiração para tatuagens.</p>
+            </header>
+        </article>
+    </section>
+
+    <section class="col-xs-12 conteudo" style="padding:20px 0;">
+	<!-- <div class="row"> -->
 		<div id='masonry' class='masonry'>
 	      <?php lista_posts_home(); ?>
 	    </div>
-    </div>
+	</section>
+    <!-- </div> -->
 </div>
 
 

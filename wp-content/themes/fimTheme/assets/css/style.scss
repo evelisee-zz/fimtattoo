@@ -61,8 +61,20 @@ Description: Used to style the TinyMCE editor.
 		margin: 20px 0;
 		padding: 40px 0;
 	}
-
-
+	.fancy{
+		display: block;
+	}
+	.fancybox-title {
+		span::after{
+			content: '/';
+			display: inline-block;
+		}
+		button{
+			background-color:transparent;
+			border:0;
+			padding:0;
+		}
+	}
 	//arrumar
 	._ohe .lfloat{
 		display:none!important;
@@ -185,6 +197,34 @@ Description: Used to style the TinyMCE editor.
 //..............
 	#colophon{
 		text-align: center;
+		position:relative;
+		margin-top: 66px;
+
+		.top-scroll{
+			position: absolute;
+			top: -49px;
+			right: -5px;
+			transition: 0.6s all;
+			background-color: #610f1e !important;
+			color: white;
+			display: inline-block;
+			width: 26px;
+			height: 26px;
+			line-height: 24px;
+			font-size: 20px;
+			margin: 0;
+			font-size: 13px;
+			border-radius: 100%;
+			text-align: center;
+			outline:none;
+
+			&:hover{
+				background-color: white!important;
+				color: $defaultColor;
+				transition-duration: 0.6s;
+				transition-property: all;
+			}
+		}
 		a{
 			transition: 0.6s all;
 			background-color:#610f1e!important;
@@ -224,6 +264,9 @@ Description: Used to style the TinyMCE editor.
 //..............
 // Home
 //..............
+	.home .container{
+		padding:0;
+	}
 	.item {
 		width:  50px;
 		height: 50px;
@@ -232,8 +275,8 @@ Description: Used to style the TinyMCE editor.
 
 	.item.medium{
 		margin-bottom: 10px;
-		width: 24%;
-		height: auto;
+		width: 24.3%;
+		height: auto!important;
 		// background: #A6E392;
 
 		img{
@@ -471,12 +514,17 @@ Description: Used to style the TinyMCE editor.
 		}
 		p{
 			font-family: 'Roboto';
+			font-size: 1.2em;
 		}
 		h2,h3,h4,h5,h6{
 			font-family: 'Roboto';
 			color:#696867;
 		}
-
+		.gallery{
+			display: block;
+			min-height: 190px;
+			height: auto;
+		}
 		strong{
 			color:#610f1e;
 			display: block;
@@ -512,6 +560,16 @@ Description: Used to style the TinyMCE editor.
 			font-size: 14px;
 			margin: 2px 0;
 			color:#404040;
+			display: inline;
+		}
+		.link-portfolio{
+			color: #61111e;
+			transition: all 0.5s;
+
+			&:hover{
+				transition: all 0.5s;
+				color:#c0c0c0;
+			}
 		}
 		p{
 			font-family: 'Roboto';
@@ -726,6 +784,34 @@ Description: Used to style the TinyMCE editor.
 
 	}
 
+
+//................
+// Search
+//................
+	.archive, .search .content-static p{
+		margin: 5px;
+	}
+	.search, .archive{
+		.container{
+			padding:0;
+		}
+		.content-static{
+			h2,p{
+				display: inline-block;
+			}
+			p{
+				font-size:1.5em;
+
+			}
+		}
+		.no-results p{
+			text-align: center;
+			font-size: 1.2em;
+			color: white;
+			font-family: 'Roboto';
+		}
+	}
+
 //.................
 // Media Querys
 //.................
@@ -852,13 +938,3 @@ Description: Used to style the TinyMCE editor.
 			}
 		}
 	}
-
-	// @media (min-width: 1197px){
-	// 	.single{
-	// 		.about-post{
-	// 			.col-sm-2{
-	// 				padding:0!important;
-	// 			}
-	// 		}
-	// 	}
-	// }

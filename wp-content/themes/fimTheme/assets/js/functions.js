@@ -8,17 +8,16 @@ $(document).ready(function($){
 	  columnWidth: 40,
 	});
 
- 	var container = document.querySelector('#masonry');
-	var masonry = new Masonry(container, {
-	    // columnWidth: 20,
+
+	var $container = $('.masonry');
+	$container.masonry({
 	    itemSelector: '.item',
 	    percentPosition: true,
 	    gutter: 10,
 	      masonry: {
-		    // use outer width of grid-sizer for columnWidth
 		    columnWidth: '.item'
 		  }
-	 });
+ 	});
 
 	$(".fancy").fancybox({
 		autoSize: false,
@@ -36,7 +35,8 @@ $(document).ready(function($){
     // HOME
     //......................
 	    //search box
-		    $('.search-button').click(function(){
+		    $('.search-button').click(function(e){
+		    	e.preventDefault();
 		    	$(this).hide();
 		    	$('.search-button-active').show();
 		    	$('.holder-hidden').show("slide");
@@ -56,8 +56,8 @@ $(document).ready(function($){
 			});
 
 		//Mostrando texto na Fancy box
-			$(".container .row .item a.fancy").click( function(){
-				// $('.fancybox-title').html('');
+			$(".container .item a.fancy").click( function(){
+				console.log('entrou');
 				var titulo =  $(this).find('figcaption h2').html();
 				var autor = $(this).find('figcaption p.author').html();
 				var categorias = $(this).find('figcaption p.tags').html();
@@ -70,23 +70,41 @@ $(document).ready(function($){
 					$('.fancybox-title').html('');
 					$('.fancybox-title').append(conteudo);
 					$(conteudo).show('slow');
-				}, 10);
+				}, 0);
 
-			})
-	// 	$(".fancybox-wrap .fancybox-title p").html('');
-	// 	$(".fancybox-wrap .fancybox-title span:nth-of-type(3)").html("AAAA");
-	// 	console.log("clicou!");
+			});
 
-	// 	var tagsEl = $(this).parent().find(".tags");
+	$(".search-button-active").click( function(e){
+		e.preventDefault();
 
-	// 	console.log(tagsEl);
+		var post_type = $(".item_search:checked").val();
+		$("input[type=hidden]").val(post_type);
 
-	// 	setTimeout(function(){
-	// 		$(".fancybox-wrap .fancybox-title p").html(tagsEl);
-	// 	}, 10);
+		$(this).parent().submit();
+	});
 
-    	
-	// });
+	$(".container .row .item a.fancy figcaption p button").prop('onclick',null).off('click');
+
+	// Single
+	// $("body.single .content-blog img").addClass("img-responsive");
+	$("body.single .gallery a").addClass("fancy");
 
 
-})
+	//.........
+	// Footer
+	//.........
+		//Scroll top
+			$('.top-scroll').click(function(){
+				console.log('entrou');
+				 $('html, body').animate({scrollTop:0}, 'slow');
+			});
+
+});
+
+function goToPage(link){
+	window.open(link, '_blank');
+}
+
+function goToSection(link){
+	window.open(link, '_self');
+}

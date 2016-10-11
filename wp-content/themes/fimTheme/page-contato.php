@@ -11,7 +11,7 @@ get_header();
 ?>
 
 
-<div class="container padding-top contato">
+<div class="container padding-top contato conteudo">
 	<div class="header">
 		<img src="<?php bloginfo( 'template_directory' ); ?>/assets/img/moon.jpg">
 	</div>
