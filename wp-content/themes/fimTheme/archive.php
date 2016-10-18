@@ -68,9 +68,9 @@ get_header(); ?>
 					echo '</article>';
 				echo '</section>';
 
+			wp_reset_postdata();
 			endwhile;
 
-			wp_reset_postdata();
 
 		?>
     </div>

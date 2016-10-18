@@ -33,6 +33,8 @@ body { padding: 0px; margin: 0px; background-color: #111111 !important; }
 
 ._ohe .lfloat { display: none !important; }
 
+.post-categories { display: none; }
+
 .content-logo { display: block; text-align: center; margin-top: 40px; }
 
 .content-button { display: block; }
@@ -160,8 +162,11 @@ body { padding: 0px; margin: 0px; background-color: #111111 !important; }
 
 .coments { margin-top: 10px; border-top: 1px solid #bfbeac; }
 
-.container-maisposts { background-color: #61111e; color: white; padding: 23px 20px; height: 148px; }
-.container-maisposts h3 { font-size: 24px; margin: 13px 0; text-transform: uppercase; }
+.posts-relacionados { max-width: 149px; height: auto; margin-left: 9px; float: left; }
+.posts-relacionados img { height: auto; }
+
+.container-maisposts { background-color: #61111e; color: white; padding: 23px 20px; height: 134px; float: left; max-width: 136px; }
+.container-maisposts h3 { font-size: 19px; margin: 13px 0; text-transform: uppercase; }
 
 .single-tatuador .container-tags { min-height: 148px; }
 .single-tatuador .box:hover .full-caption { -moz-transform: translateY(100%); -o-transform: translateY(100%); -webkit-transform: translateY(100%); opacity: 1; transform: translateY(100%); }
@@ -170,7 +175,7 @@ body { padding: 0px; margin: 0px; background-color: #111111 !important; }
 .single-tatuador .box .caption { background-color: rgba(97, 17, 30, 0.8); position: absolute; color: #fff; z-index: 100; -webkit-transition: all 300ms ease-out; -moz-transition: all 300ms ease-out; -o-transition: all 300ms ease-out; -ms-transition: all 300ms ease-out; transition: all 300ms ease-out; left: 0; }
 .single-tatuador .box .caption h3 { text-transform: uppercase; padding-top: 20px; }
 
-.container-posts img { height: 148px; }
+.container-posts img { height: 135px; }
 
 .contato .header img { width: 100%; }
 .contato .content-fim { padding: 30px; background: #61111e; width: 100%; color: white; }
@@ -196,26 +201,56 @@ body { padding: 0px; margin: 0px; background-color: #111111 !important; }
 .search .content-static p, .archive .content-static p { font-size: 1.5em; }
 .search .no-results p, .archive .no-results p { text-align: center; font-size: 1.2em; color: white; font-family: 'Roboto'; }
 
-@media (min-width: 325px) and (max-width: 360px) { #navbar .pull-left { float: none !important; }
-  #navbar li { display: block !important; padding: 5px 0 !important; text-align: right !important; }
+@media (min-width: 200px) and (max-width: 550px) { #navbar { margin: 0 !important; }
+  #navbar .pull-left { float: none !important; }
+  #navbar li { display: block !important; padding: 5px !important; text-align: right !important; }
   #navbar li::before, #navbar li::after { content: none !important; }
-  .single .about-post { max-width: 80%; margin: 60px auto; display: block; }
-  .single .about-post .col-sm-2 { padding: 15px !important; } }
-@media (max-width: 600px) and (min-width: 360px) { #navbar .pull-left { float: none !important; }
-  #navbar li { display: block !important; padding: 5px 0 !important; text-align: right !important; }
+  .content-menu .search { margin: 5px 0 !important; }
+  .content-menu .search .search-input { width: 97%; }
+  .content-menu .search .search-button-active { width: 100%; margin-top: 5px; border-radius: 0px 0px 5px 5px; display: inline-block; }
+  .home .grid, .category .grid { width: 100% !important; padding: 0 20px !important; }
+  .home figcaption, .category figcaption { padding: 3em !important; }
+  .home figcaption h2, .category figcaption h2 { font-size: 20px !important; margin: 0 !important; }
+  .home figcaption p, .category figcaption p { font-size: 15px !important; width: 100% !important; margin: 5px 0 !important; padding: 0 !important; }
+  .no-margin .row { margin: 0 !important; }
+  .blog-article img { min-height: initial !important; }
+  .blog-article .data { padding: 10px !important; }
+  .about-post .col-sm-6 { margin-bottom: 10px; height: auto !important; display: inherit !important; }
+  .about-post .share { float: none !important; }
+  .posts-relacionados { margin: 0 auto; }
+  .container-maisposts { float: none !important; max-width: 149px; display: inherit; }
+  #colophon .top-scroll { right: 5px !important; } }
+@media (max-width: 600px) and (min-width: 551px) { #navbar { margin: 0 !important; }
+  #navbar .pull-left { float: none !important; }
+  #navbar li { display: block !important; padding: 5px !important; text-align: right !important; }
   #navbar li::before, #navbar li::after { content: none !important; }
-  .single .about-post .share { float: none !important; }
-  .single .container-maisposts, .single .container-posts { max-width: 170px !important; margin: 10px auto !important; }
-  .blog figure img { min-height: 0 !important; }
-  .blog .row { margin: 0 !important; }
-  .static-banner { padding: 0 !important; }
-  .static-banner h2 { text-align: center !important; float: none !important; display: block !important; }
-  .grid { width: 100% !important; padding: 0 20px !important; } }
-@media (max-width: 850px) and (min-width: 601px) { .single .about-post .col-sm-2 { margin-bottom: 15px; width: 33.33% !important; float: left !important; }
-  .single .about-post .col-sm-3 { width: 50% !important; float: left !important; }
-  .blog .col-sm-6 { width: 50% !important; }
-  .blog img { min-height: initial !important; }
-  .blog .row { margin: 0 !important; }
-  .static-banner { padding: 0 !important; }
-  .static-banner, .list-avulse { width: 33.3% !important; float: left !important; }
-  .static-banner li, .list-avulse li { width: 100% !important; } }
+  .no-margin .row { margin: 0 !important; }
+  .blog-article img { min-height: initial !important; }
+  .blog-article .data { padding: 10px !important; }
+  .about-post .col-sm-6 { margin-bottom: 10px; height: auto !important; display: inherit !important; }
+  .about-post .share { float: none !important; }
+  .posts-relacionados { margin: 0 auto; }
+  .container-maisposts { float: left !important; max-width: 149px; display: inherit; }
+  .grid { width: 48% !important; padding: 0 20px !important; }
+  .home figcaption, .category figcaption { padding: 2.5em 1.2em !important; }
+  .home figcaption h2, .category figcaption h2 { font-size: 20px !important; }
+  .home figcaption p, .category figcaption p { font-size: 13px !important; width: 100% !important; margin: 0 !important; padding: 0 !important; }
+  #colophon .top-scroll { right: 5px; } }
+@media (max-width: 900px) and (min-width: 601px) { #navbar { margin: 0 !important; }
+  .page .col-sm-6 { width: 50% !important; }
+  .page img { min-height: 300px !important; }
+  .page .row { margin: 0 !important; }
+  .home .grid, .category .grid { width: 32% !important; }
+  .home figcaption, .category figcaption { padding: 2em 1em !important; }
+  .home figcaption h2, .category figcaption h2 { margin: 0 !important; }
+  .home figcaption p, .category figcaption p { width: 100% !important; margin: 0 !important; padding: 0 !important; }
+  .about-post .col-sm-6 { margin-bottom: 10px; height: auto !important; display: inherit !important; }
+  .about-post .share { float: none !important; }
+  .posts-relacionados { margin: 0 auto; }
+  .container-maisposts { float: left !important; max-width: 149px; display: inherit; }
+  #colophon .top-scroll { right: 5px; } }
+@media (max-width: 1135px) and (min-width: 901px) { .page img { min-height: 290px !important; }
+  .category figcaption { padding: 2em 1em !important; }
+  .category figcaption h2 { margin: 0 !important; }
+  .category figcaption p { width: 100% !important; margin: 0 !important; padding: 0 !important; }
+  .grid { width: 30% !important; } }

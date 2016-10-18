@@ -23,6 +23,10 @@ $(document).ready(function($){
 		autoSize: false,
     	openEffect	: 'elastic',
     	closeEffect	: 'elastic',
+    	// content: '<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i><span class="sr-only">Carregando</span>',
+    	'afterShow' : function () {
+            $(".fancybox-title").html('<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>');
+        },
 
     	helpers : {
     		title : {
@@ -55,22 +59,27 @@ $(document).ready(function($){
 				}
 			});
 
+		var conteudo = '';
+		
 		//Mostrando texto na Fancy box
 			$(".container .item a.fancy").click( function(){
+				// $('.fancybox-title').html('<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i><span class="sr-only">Carregando</span>');
 				console.log('entrou');
 				var titulo =  $(this).find('figcaption h2').html();
 				var autor = $(this).find('figcaption p.author').html();
 				var categorias = $(this).find('figcaption p.tags').html();
 
 				console.log(titulo);
-				var conteudo = '';
-				var conteudo = '<p><strong>' +titulo+  '</strong><br/><strong>' +autor+  '</strong><br/><strong>' +categorias+  '</strong><br/></p>';
+				
+				conteudo = '<p><strong>' +titulo+  '</strong><br/><strong>' +autor+  '</strong><br/><strong>' +categorias+  '</strong><br/></p>';
+
+				// $('.fancybox-title').html('<i class="fa fa-spinner fa-spin></i>');
 
 				setTimeout(function(){
 					$('.fancybox-title').html('');
 					$('.fancybox-title').append(conteudo);
 					$(conteudo).show('slow');
-				}, 0);
+				}, 1000);
 
 			});
 
@@ -83,10 +92,11 @@ $(document).ready(function($){
 		$(this).parent().submit();
 	});
 
-	$(".container .row .item a.fancy figcaption p button").prop('onclick',null).off('click');
+
+	//Remove o link dos botoes na home
+	$(".item a.fancy figcaption p button").prop("onclick", null);
 
 	// Single
-	// $("body.single .content-blog img").addClass("img-responsive");
 	$("body.single .gallery a").addClass("fancy");
 
 

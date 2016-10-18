@@ -696,7 +696,7 @@ function post_relacionados($postID, $postTax){
 			$titulo					= get_the_title();
 			$image 					= get_the_post_thumbnail();
 			
-			echo '<div class="col-sm-2">';
+			echo '<div class="posts-relacionados">';
 				echo '<div class="container-posts box">';
 
 					echo '<a href="'. get_permalink( get_the_ID() ) .'" class="oswald">';
@@ -721,5 +721,4 @@ function post_relacionados($postID, $postTax){
 
 	wp_reset_postdata();
 }
-
 

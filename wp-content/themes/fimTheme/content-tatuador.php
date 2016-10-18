@@ -47,13 +47,13 @@
 </article><!-- #post-## -->
 
 <div class="about-post">
-	<div class="col-sm-2">
+	<div class="col-sm-6">
 		<div class="container-maisposts">
 			 <h3 class="roboto">Mais artistas</h3>
 		</div>
+		<?php echo post_relacionados($postID, $slugs); ?>
 	</div>
 
-	<?php echo post_relacionados($postID, $slugs); ?>
 
 	<div class="col-sm-3">
 		<div class="container-tags">
