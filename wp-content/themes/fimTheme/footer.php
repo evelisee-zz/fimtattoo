@@ -12,7 +12,7 @@
 
 	</div><!-- .site-content -->
 
-	<footer id="colophon" class="container site-footer holder" role="contentinfo">	
+	<footer id="colophon" class="container site-footer" role="contentinfo">	
 		<button class="rtio-btn btn-clear top-scroll"><i class="fa fa-chevron-up"></i></button>
 
 		<a href="https://www.facebook.com/FIMtattoo/" target="_blank" class="rtio-btn btn-clear" data-toggle="tooltip" title="Acompanhe nossas novidades">

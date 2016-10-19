@@ -21,6 +21,8 @@
 	<link href='<?php bloginfo( 'template_directory' ); ?>/assets/css/plugins/fancybox.css' rel='stylesheet'>
 	<link href='<?php bloginfo( 'template_directory' ); ?>/assets/css/plugins/bootstrap.min.css' rel='stylesheet'>
 	<link href='<?php bloginfo( 'template_directory' ); ?>/assets/css/font-awesome.css' rel='stylesheet'>
+	<link rel="shortcut icon" href="<?php bloginfo( 'template_directory' ); ?>/assets/img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="<?php bloginfo( 'template_directory' ); ?>/assets/img/favicon.ico" type="image/x-icon">
 	<!--[if lt IE 9]>
 	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/html5.js"></script>
 	<![endif]-->
@@ -47,9 +49,9 @@
 				<div class="content-button">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
+						<span class="bar-icon"></span>
+						<span class="bar-icon"></span>
+						<span class="bar-icon"></span>
 					</button>
 					<div style="clear:both;"></div>
 				</div>

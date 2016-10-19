@@ -43,6 +43,12 @@ Description: Used to style the TinyMCE editor.
 		border:0;
 		background-color:transparent;
 	}
+	.white{
+		color:white;
+	}
+	.colorRed{
+		color: $defaultColor;
+	}
 
 	.rtio-btn{
 		border-radius:50%;
@@ -83,9 +89,32 @@ Description: Used to style the TinyMCE editor.
 		display: none;
 	}
 
+
+	.pageNotFound{
+		text-align: center;
+		font-size: 2em;
+	}
+
 //..............
 // Header
 //..............
+	#navbar{
+		padding:0;
+	}
+	.home #navbar{
+		padding: 0 14px;
+	}
+	.content-button button{
+		margin:0;
+		border:0!important;
+	}
+	.bar-icon{
+		width: 25px;
+		height: 5px;
+		margin: 5px;
+		display: block;
+		background: white!important;
+	}
 	.content-logo{
 		display:block;
 		text-align: center;
@@ -362,13 +391,14 @@ Description: Used to style the TinyMCE editor.
 	.blog{
 		.content-static{
 			h2{
-				margin: 5px;
+				margin: 3px 0 0 18px;
 				display:inline-block;
 				float: left;
 			}
 			p{
 				display:inline-block;
 				padding-left: 20px;
+				margin: 8px 0;
 			}
 		}
 		// Article 
@@ -715,6 +745,7 @@ Description: Used to style the TinyMCE editor.
 // Contato
 //..............
 	.contato{
+		padding: 15px 0!important;
 		.header img{
 			width: 100%;
 		}
@@ -738,7 +769,7 @@ Description: Used to style the TinyMCE editor.
 		}
 		.content-contact{
 			width: 80%;
-			margin:0 auto;
+			margin: 70px auto 0;
 			h1{
 				font-size: 2.4em;
 				text-transform: uppercase;
